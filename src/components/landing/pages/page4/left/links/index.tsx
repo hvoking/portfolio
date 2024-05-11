@@ -18,7 +18,7 @@ export const Links = () => {
 					width="20px"
 				/>
 				</div>
-				<div className="pages-description">linkedin</div>
+				<div className="pages-description">in/urbangeometries</div>
 			</div>
 		</a>
 		

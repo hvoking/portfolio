@@ -15,8 +15,8 @@ export const Left = () => {
 					alt="dog-image"
 				/>
 				<div style={{display: "grid", gridGap: "10px", alignItems: "center"}}>
-					<Email/>
 					<Links/>
+					<Email/>
 					<Phone/>
 				</div>
 			</div>

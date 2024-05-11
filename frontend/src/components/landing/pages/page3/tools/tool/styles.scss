@@ -1,0 +1,25 @@
+.tool-icon-wrapper {
+	display: grid;
+	grid-template-rows: auto min-content;
+	grid-gap: 5px;
+	justify-items: center;
+	align-items: center;
+}
+.tool-icon {
+	max-width: 35px;
+	max-height: 35px;
+}
+.tool-title {
+	color: rgba(255, 255, 255, 0.6); 
+}
+
+@media screen and (width < 600px) {
+	.tool-icon {
+		max-width: 25px;
+		max-height: 25px;
+	}
+	.tool-title {
+		font-size: 0.6em;
+	}
+	
+}

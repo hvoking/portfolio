@@ -1,0 +1,26 @@
+.skills-wrapper {
+	display: grid;
+	padding: 20px;
+	grid-gap: 20px;
+	background-color: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(6px);
+}
+.tool-list {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+}
+.tools-title {
+	font-size: 1.2em;
+	color: rgba(255, 255, 255, 1);
+	padding-bottom: 5px;
+}
+
+@media screen and (max-width: 600px) {
+	.tools-title {
+		font-size: 1em;
+		color: rgba(255, 255, 255, 1);
+	}	
+	.skills-wrapper {
+		grid-gap: 10px;
+	}
+}

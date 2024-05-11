@@ -1,0 +1,16 @@
+.slider-description-wrapper {
+  display: grid; 
+  grid-template-rows: auto min-content 10px; 
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.slider-description {
+  color: rgba(255, 255, 255, 0.6);
+  grid-gap: 5px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: min-content auto;
+}

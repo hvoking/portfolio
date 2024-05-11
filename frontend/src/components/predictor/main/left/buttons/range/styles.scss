@@ -1,0 +1,29 @@
+.calculator-range-items {
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 10px;
+	text-align: center;
+}
+.calculator-icon-image {
+	width: 30px;
+}
+.calculator-price-button {
+	border-radius: 5px;
+	height: min-content;
+	cursor: pointer;
+	background-color: rgba(23, 23, 32, 1);
+	color: rgba(126, 126, 132, 1);
+	border: 2px solid rgba(126, 126, 132, 1);
+}
+.calculator-price-button:hover {
+	color: rgba(255, 255, 255, 1);
+	border: 2px solid rgba(255, 255, 255, 1);
+}
+.calculator-price-button-active {
+	border-radius: 5px;
+	height: min-content;
+	cursor: pointer;
+	color: rgba(255, 255, 255, 1);
+	border: 2px solid rgba(255, 255, 255, 1);
+	background-color: rgba(23, 23, 32, 1);
+}

@@ -1,0 +1,14 @@
+.resume-list {
+    padding-bottom: 30px;
+    display: grid;
+    line-height: 1.6;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.resume-job-header {
+    padding-bottom: 10px;
+    font-weight: 500;
+    a {
+        letter-spacing: 0.2px;
+    }
+}

@@ -46,14 +46,14 @@ export const ExtraTools = ({ setExtraTools }: any) => {
 								src="static/components/landing/extra/redirect.svg" 
 								width="15px" 
 								alt="redirect"
-								onClick={() => window.open(`https://hvoking.github.io/serverless-geometry-creator/`)}
+								onClick={() => window.open(`https://hvoking.github.io/geometry/`)}
 							/>
 						</div>
 						<img 
 							src="static/components/landing/extra/1.jpg" 
 							alt="geometry-app" 
 							width="100%"
-							onClick={() => window.open(`https://hvoking.github.io/serverless-geometry-creator/`)}
+							onClick={() => window.open(`https://hvoking.github.io/geometry/`)}
 						/>
 						<div>Static Website, built entirely with JavaScript and powered by Three.js.</div>
 					</div>
@@ -80,20 +80,20 @@ export const ExtraTools = ({ setExtraTools }: any) => {
 					<div className="extra-tool-item">
 						<div className="extra-tool-header">
 							<div className="extra-tool-subtitle">
-								Real Estate X
+								Real Estate Demo
 							</div>
 							<img 
 								src="static/components/landing/extra/redirect.svg" 
 								width="15px" 
 								alt="redirect"
-								onClick={() => window.open(`https://hvoking.github.io/RealEstateX/`)}	
+								onClick={() => window.open(`https://hvoking.github.io/demo/`)}	
 							/>
 						</div>
 						<img 
 							src="static/components/landing/extra/3.jpg" 
 							alt="real-estate-x" 
 							width="100%"
-							onClick={() => window.open(`https://hvoking.github.io/RealEstateX/`)}
+							onClick={() => window.open(`https://hvoking.github.io/demo/`)}
 						/>
 						<div>Real Estate Platform Demo, intuitive listings and visualizations.</div>
 					</div>

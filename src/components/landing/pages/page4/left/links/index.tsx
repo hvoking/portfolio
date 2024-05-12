@@ -4,7 +4,7 @@ export const Links = () => {
 	return (
 		
 		<a 
-			href="https://www.linkedin.com/in/urbangeometries/"
+			href="https://www.linkedin.com/in/computational-designer/"
 			style={{display: "table-cell", textDecoration: "none"}}
 			target="_blank"
 			rel="noopener noreferrer"
@@ -18,7 +18,7 @@ export const Links = () => {
 					width="20px"
 				/>
 				</div>
-				<div className="pages-description">in/urbangeometries</div>
+				<div className="pages-description">in/computational-designer</div>
 			</div>
 		</a>
 		

@@ -21,7 +21,7 @@ export const Contact = () => {
 		    	<div>gus@ugeom.com</div>
 		    </div>
 		    <a 
-		    	href="https://www.linkedin.com/in/urbangeometries/"
+		    	href="https://www.linkedin.com/in/computational-designer/"
 		    	className="resume-contact-item" 
 		    	target="_blank"
 		    	rel="noopener noreferrer"
@@ -32,7 +32,7 @@ export const Contact = () => {
 		    		src="static/components/landing/social/linkedin.svg" 
 		    		alt="linkedin" 
 		    	/>
-		    	<div>linkedin.com/in/urbangeometries</div>
+		    	<div>linkedin.com/in/computational-designer</div>
 		    </a>
 		    <a 
 	            	href="https://urbangeometries.com/"

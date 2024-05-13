@@ -8,7 +8,7 @@ export const Experience = () => {
 	    	<div style={{display: "grid", gridTemplateColumns: "min-content auto" }}>
 	    		<Arrow/>
 		        <div className="resume-job-header">
-		            <div>CO-FOUNDER | CHIEF TECHNICAL OFFICER</div>
+		            <div>CHIEF TECHNOLOGY OFFICER</div>
 		            <div>
 			            <a 
 			            	href="https://generativa.io/"

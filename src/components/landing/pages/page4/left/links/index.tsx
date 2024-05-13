@@ -18,7 +18,7 @@ export const Links = () => {
 					width="20px"
 				/>
 				</div>
-				<div className="pages-description">in/computational-designer</div>
+				<div className="pages-description">linkedin/profile</div>
 			</div>
 		</a>
 		

@@ -1,8 +1,10 @@
 export const Description = () => {
 	return (
 		<p className="pages-description">
-			Hi there! I'm Gustavo. As an Architect and Computational Designer 
-			specializing in data-driven design, I develop Parametric Tools, from zero to deployment.
+			I'm an Architect with a strong foundation <br/>
+			in programming, specializing in the <br/>
+			seamless integration of data and design, <br/>
+			focusing on interactivity and geolocation.
 		</p>
 	)
 }

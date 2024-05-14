@@ -8,7 +8,7 @@ export const Experience = () => {
 	    	<div style={{display: "grid", gridTemplateColumns: "min-content auto" }}>
 	    		<Arrow/>
 		        <div className="resume-job-header">
-		            <div>CHIEF TECHNOLOGY OFFICER</div>
+		            <div>FULL STACK DEVELOPER</div>
 		            <div>
 			            <a 
 			            	href="https://generativa.io/"
@@ -20,12 +20,43 @@ export const Experience = () => {
 		            </div>
 		        </div>
 	        </div>
+	        <p style={{paddingLeft: "20px", paddingBottom: "10px"}}>
+	        	Drove the implementation of computational design workflows. 
+        		Utilizing PostgreSQL for data management, 
+        		Django for backend development, 
+        		and React for dynamic user interfaces.
+        		Successfully deploying applications to the AWS cloud with continuous integration.
+        	</p>
 	        <ul className="resume-list">
-	        	<li>Generated automatic representations of zone regulations in specific locations;</li>
-	        	<li>Geolocated over 200.000 properties, saving $40,000 at 20 cents per point;</li>
-	        	<li>Managed application deployment on AWS cloud with continuous integration;</li>
-	        	<li>Offered actionable insights by analyzing data from 837 real estate agencies;</li>
-	        	<li>Prototyped interactive interfaces with sharp graphics using parameterized SVG;</li>
+	        	<li>
+	        		Created web application 
+	        		utilized by real estate agents, 
+	        		providing actionable insights 
+	        		through the analysis of data collected from 837 real estate agencies;
+	        	</li>
+	        	<li>
+	        		Developed a spatial analytics tool 
+	        		that provides a 3D representation of zone regulations, 
+	        		facilitating zoning analysis processes 
+	        		for architects who perform this as a repetitive task;
+	        	</li>
+	        	<li>
+	        		Gathered and Centralized urban data, 
+	        		including transportation, environmental features, and buildings, 
+	        		using web scraping, OpenStreetMap, and GIS tools;
+	        	</li>
+	        	<li>
+	        		Revitalized an underutilized database 
+	        		by implementing geolocation for over 200K properties, each with comprehensive metadata, 
+	        		and seamlessly visualized them on interactive maps 
+	        		leveraging technologies such as Mapbox and Deck.gl;
+	        	</li>
+	        	<li>
+	        		Prototyped interactive interfaces with sharp graphics 
+	        		using parameterized scalable vector graphics SVG,
+	        		optimizing cross-browser and multi-platform compatibility 
+	        		by reusing modular components and sharing between projects;
+	        	</li>
 	        	<li>Slashed 2 hours of repetitive tasks daily by automating data transfers;</li>
 	        	<li>Predicted property prices with a location-based machine learning calculator.</li>
 	        	{/*<li>Boosted API performance with Redis cache implementation;</li>
@@ -36,7 +67,7 @@ export const Experience = () => {
         	<div style={{display: "grid", gridTemplateColumns: "min-content auto" }}>
 	        	<Arrow/>
 	        	<div className="resume-job-header">
-	            <div>TECHNICAL COORDINATOR</div>
+	            <div>BUDGETING ARCHITECT</div>
 	            <div>
 		            <a 
 		            	href="https://www.instagram.com/salumywenzpy/"
@@ -49,10 +80,21 @@ export const Experience = () => {
         	</div>
 	        </div>
 	        <ul className="resume-list">
-	            <li>Leverage BIM tools to ensure seamless coordination among project stakeholders;</li>
-	            <li>Supervised on-site construction ensuring strict adherence to project plans and timelines;</li>
-	        	<li>Reduced quantification time through BIM methodologies and budget simulation scripts;</li>
-	        	<li>Collaborated with architects and engineers to create project budgets and financial forecasts.</li>
+	        	<li>
+	            	Collaborated with architects and engineers to create precise budget projections 
+	            	for projects ranging from residential scale to significant developments, 
+	            	ensuring a comprehensive understanding of all aspects of each project;
+	            </li>
+	        	<li>
+	        		Facilitated interdisciplinary integration 
+	        		by incorporating BIM methodologies into project workflows, 
+	        		with parametric modeling and budget simulation 
+	        		using Revit, Dynamo, and Navisworks;
+	        	</li>
+	        	<li>
+	        		Supervised activities in the construction of a 9900 square meter project, 
+	        		to ensure adherence to project plans, timelines, specifications, and quality standards;
+	        	</li>
 	        </ul>
 	    </div>
 	)

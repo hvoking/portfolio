@@ -4,10 +4,14 @@ import './styles.scss';
 export const Summary = () => {
 	return (
 		<p className="resume-summary">
-			Highly Skilled Computational Designer specializing in integrating web technologies
-			into architectural and urban design. I employ a multidisciplinary approach, 
-			blending visualization techniques, generative algorithms, and location data to create 
-			geometric representations that effectively convey information.
+			Architect with a strong foundation in programming, 
+			specializing in seamlessly integrating web technologies 
+			into architectural and urban design. 
+			My work revolves around creating parametric web applications 
+			with stunning graphical interfaces 
+			and precise geometric representations. 
+			These applications effectively convey information, 
+			with an emphasis on interactivity and geolocation features.
 		</p>
 	)
 }

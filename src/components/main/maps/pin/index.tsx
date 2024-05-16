@@ -14,17 +14,15 @@ export const Pin = () => {
 	const { marker, setMarker, setPlaceCoordinates } = useGeo();
 
 	const onMarkerDrag = useCallback((event: any) => {
-		setMarker({
-			longitude: event.lngLat.lng,
-			latitude: event.lngLat.lat
-		});
+		const lat = event.lngLat.lat;
+		const lng = event.lngLat.lng;
+		setMarker({longitude: lng, latitude: lat});
 	}, []);
 
 	const onMarkerDragEnd = useCallback((event: any) => {
-		setPlaceCoordinates({
-			longitude: event.lngLat.lng,
-			latitude: event.lngLat.lat
-		});
+		const lat = event.lngLat.lat;
+		const lng = event.lngLat.lng;
+		setPlaceCoordinates({longitude: lng, latitude: lat});
 	}, []);
 	  
 	return (

@@ -9,7 +9,7 @@ import { useGeo } from '../context/filters/geo';
 export const Left = () => {
 	const { isoData } = useIsoApi();
 	const { cityName } = useGeo();
-	const isochroneArea = isoData && Math.round((isoData[0].iso_polygon_area / 1000) * 100) / 100;
+	const isochroneArea = isoData && Math.round((isoData[0].polygon_area / 1000) * 100) / 100;
 
 	return (
 		<div className="left-wrapper">

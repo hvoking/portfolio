@@ -61,6 +61,7 @@ export const Lines = ({
                 return(
                     
                     <rect
+                        key={index}
                         x={xScale(item) + 1}
                         y={yScale(areasCount[item])}
                         width={currentWidth - 2}

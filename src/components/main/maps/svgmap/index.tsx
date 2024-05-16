@@ -22,9 +22,9 @@ export const SVGMap = () => {
 	const { lineColor, lineWidth, fillColor } = useStyleSheet();
 	const svgContainerRef = useRef<any>(null);
 
-	if (!circleGeometry || !circleData || !circleData.city_geom) return (<></>)
+	if (!circleGeometry || !circleData || !circleData[0].city_geom) return (<></>)
 
-	const city = circleData.city_geom[0];
+	const city = circleData[0].city_geom[0];
 	const polygon = circleGeometry.features[0].geometry;	
 
 	const projection = d3.geoIdentity()

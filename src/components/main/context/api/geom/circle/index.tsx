@@ -14,19 +14,20 @@ export const useCircleApi = () => {
 }
 
 export const CircleApiProvider = ({children}: any) => {
-	const { cityName } = useGeo();
+	const { cityName, placeCoordinates } = useGeo();
 	const { circleGeometry } = useCircleDimensions();
 
 	const [ circleData, setCircleData ] = useState<any>(null);
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const res = await fetch(`${process.env.REACT_APP_API_URL}/circle_api`, {
+			const res = await fetch(`${process.env.REACT_APP_API_URL}/iso_api`, {
 				method: "POST",
 				headers: {'Content-Type': 'application/json'},
 				body: JSON.stringify({ 
-					"polygon": JSON.stringify(circleGeometry.features[0].geometry),
-					"city_name": cityName
+					"iso_polygon": JSON.stringify(circleGeometry.features[0].geometry),
+			  		"longitude": JSON.stringify(placeCoordinates.longitude),
+					"latitude": JSON.stringify(placeCoordinates.latitude),
 				}),
 			});
 			const receivedData = await res.json();

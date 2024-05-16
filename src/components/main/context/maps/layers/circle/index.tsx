@@ -32,8 +32,8 @@ export const CircleLayerProvider = ({children}: any) => {
 			data: circleGeometry.features[0].geometry,
 			getFillColor: circleFill.map((item: any) => parseInt(item)),
 			getLineColor: [126, 126, 132, 80],
-			getLineWidth: 1,
 			parameters: { depthTest: false },
+			getLineWidth: 1,
 		});
 
 	return (

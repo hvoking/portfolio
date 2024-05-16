@@ -36,6 +36,7 @@ export const ParcelsProvider = ({children}: any) => {
 	useEffect(() => {
 		const getParcelParameters = () => {
 			const currentParcel = parcelsData.filter((item: any) => item.id === parcelId);
+			
 			const currentCentroid = currentParcel.length > 0 ? currentParcel[0].centroid : null;
 			currentCentroid && setParcelLongitude(currentCentroid.coordinates[0]);
 			currentCentroid && setParcelLatitude(currentCentroid.coordinates[1]);
@@ -50,7 +51,7 @@ export const ParcelsProvider = ({children}: any) => {
 		item.constructed_area < builtAreaTo
 	)
 
-	const parcelsPolygon = parcelsData &&
+	const parcelsLayer = parcelsData &&
 			new PolygonLayer({
 				id: 'parcels-layer',
 				data: filterParcelData,
@@ -82,7 +83,7 @@ export const ParcelsProvider = ({children}: any) => {
 				visible: activeLots
 			});
 	return (
-		<ParcelsContext.Provider value={{ parcelsPolygon }}>
+		<ParcelsContext.Provider value={{ parcelsLayer }}>
 			{children}
 		</ParcelsContext.Provider>
 	)

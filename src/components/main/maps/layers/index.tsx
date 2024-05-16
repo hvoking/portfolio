@@ -18,7 +18,7 @@ const DeckGLOverlay = (props: DeckProps) => {
 }
 
 export const Layers = () => {
-	const { parcelsPolygon } = useParcels();
+	const { parcelsLayer } = useParcels();
 	const { circleLayer } = useCircle();
 	const { curvesLayer } = useCurves();
 	const { drainLayer } = useDrain();
@@ -27,7 +27,7 @@ export const Layers = () => {
 
 	const layers = [ 
 		circleLayer, 
-		parcelsPolygon,
+		parcelsLayer,
 		drainLayer,
 		curvesLayer,
 		buildingLayer,

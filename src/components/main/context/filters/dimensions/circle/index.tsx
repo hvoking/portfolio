@@ -18,6 +18,7 @@ export const CircleDimensionsProvider = ({children}: any) => {
 	const [ radiusPosition, setRadiusPosition ] = useState(0.005);
 	const [ circleRadius, setCircleRadius ] = useState(0.005);
 	const [ circleGeometry, setCircleGeometry ] = useState<any>(null);
+	
 	const minBound = 0.001;
 	const maxBound = 0.01;
 

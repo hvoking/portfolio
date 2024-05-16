@@ -48,8 +48,8 @@ export const Lines = ({ xScale, minBound, maxBound, innerWidth, innerHeight }: a
         <>
             {Object.keys(areasCount).slice(0, -1).map((item: any, index: number) => {
                 return(
-                    
                     <rect
+                        key={index}
                         x={xScale(item) + 1}
                         y={yScale(areasCount[item])}
                         width={currentWidth - 2}

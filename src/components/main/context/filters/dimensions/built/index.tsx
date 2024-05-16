@@ -9,7 +9,7 @@ export const useBuiltDimensions = () => {
 }
 
 export const BuiltDimensionsProvider = ({children}: any) => {
-	const [ builtAreaFrom, setBuiltAreaFrom ] = useState(100);
+	const [ builtAreaFrom, setBuiltAreaFrom ] = useState(0);
 	const [ builtAreaTo, setBuiltAreaTo ] = useState(600);
 
 	const [ leftPosition, setLeftPosition ] = useState(0);

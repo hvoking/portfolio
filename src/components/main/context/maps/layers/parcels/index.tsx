@@ -47,8 +47,8 @@ export const ParcelsProvider = ({children}: any) => {
 	const filterParcelData = parcelsData && parcelsData.filter((item: any) => 
 		item.area > parcelAreaFrom && 
 		item.area < parcelAreaTo &&
-		item.constructed_area > builtAreaFrom && 
-		item.constructed_area < builtAreaTo
+		item.constructed_area >= builtAreaFrom && 
+		item.constructed_area <= builtAreaTo
 	)
 
 	const parcelsLayer = parcelsData &&
@@ -66,6 +66,8 @@ export const ParcelsProvider = ({children}: any) => {
 					[126, 126, 132, 255] :
 					d.id in parcelsProperties ? 
 					[172, 208, 56, 50] : 
+					d.constructed_area === 0 ?
+					[255, 255, 0, 255] :
 					[126, 126, 132, 120],
 				updateTriggers: {
 					"getFillColor": [

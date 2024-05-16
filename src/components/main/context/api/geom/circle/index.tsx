@@ -21,11 +21,11 @@ export const CircleApiProvider = ({children}: any) => {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const res = await fetch(`${process.env.REACT_APP_API_URL}/iso_api`, {
+			const res = await fetch(`${process.env.REACT_APP_API_URL}/polygon_api`, {
 				method: "POST",
 				headers: {'Content-Type': 'application/json'},
 				body: JSON.stringify({ 
-					"iso_polygon": JSON.stringify(circleGeometry.features[0].geometry),
+					"polygon": JSON.stringify(circleGeometry.features[0].geometry),
 			  		"longitude": JSON.stringify(placeCoordinates.longitude),
 					"latitude": JSON.stringify(placeCoordinates.latitude),
 				}),

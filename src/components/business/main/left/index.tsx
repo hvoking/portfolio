@@ -3,13 +3,13 @@ import { IsoPolygonSVG } from './isoPolygon';
 import './styles.scss';
 
 // Context imports
-import { useIsoApi } from '../context/api/iso';
+import { usePolygonApi } from '../context/api/polygon';
 import { useGeo } from '../context/filters/geo';
 
 export const Left = () => {
-	const { isoData } = useIsoApi();
+	const { polygonData } = usePolygonApi();
 	const { cityName } = useGeo();
-	const isochroneArea = isoData && Math.round((isoData[0].polygon_area / 1000) * 100) / 100;
+	const isochroneArea = polygonData && Math.round((polygonData[0].polygon_area / 1000) * 100) / 100;
 
 	return (
 		<div className="left-wrapper">

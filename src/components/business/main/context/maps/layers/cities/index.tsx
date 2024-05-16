@@ -2,7 +2,7 @@
 import { useContext, createContext } from 'react';
 
 // Context imports
-import { useIsoApi } from '../../../api/iso';
+import { usePolygonApi } from '../../../api/polygon';
 
 // Third-party imports
 // @ts-ignore
@@ -18,9 +18,9 @@ export const useCitiesLayer = () => {
 }
 
 export const CitiesLayerProvider = ({children}: any) => {
-	const { isoData } = useIsoApi();
+	const { polygonData } = usePolygonApi();
 
-	const citiesLayer = isoData && isoData[0].city_geom.map((item: any, index: number) => {
+	const citiesLayer = polygonData && polygonData[0].city_geom.map((item: any, index: number) => {
 		return new GeoJsonLayer({
 			id: `cities-geojson-${index}`,
 			pickable: true,

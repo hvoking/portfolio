@@ -1,19 +1,19 @@
 // App imports
 import { GoogleApiProvider } from './google';
-import { IsoApiProvider } from './iso';
+import { PolygonApiProvider } from './polygon';
 import { CnpjApiProvider } from './cnpj';
 import { IsoPolygonApiProvider } from './isoPolygon';
 
 export const ApiProvider = ({children}: any) => {
   return (
     <IsoPolygonApiProvider>
-    <IsoApiProvider>
+    <PolygonApiProvider>
     <GoogleApiProvider>
     <CnpjApiProvider>
       {children}
     </CnpjApiProvider>
     </GoogleApiProvider>
-    </IsoApiProvider>
+    </PolygonApiProvider>
     </IsoPolygonApiProvider>
   )
 }

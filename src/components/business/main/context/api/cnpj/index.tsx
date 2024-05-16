@@ -5,7 +5,7 @@ import { useState, useEffect, useContext, createContext } from 'react';
 import { cnpjProperties } from './properties';
 
 // Context imports
-import { useIsoApi } from '../iso';
+import { usePolygonApi } from '../polygon';
 
 const CnpjApiContext: React.Context<any> = createContext(null)
 
@@ -16,7 +16,7 @@ export const useCnpjApi = () => {
 }
 
 export const CnpjApiProvider = ({children}: any) => {
-	const { isoData } = useIsoApi();
+	const { polygonData } = usePolygonApi();
 	const [ cnpjData, setCnpjData ] = useState<any>(null);
 	const [ cnpjCountsData, setCnpjCountsData ] = useState<any>(null);
 
@@ -32,8 +32,8 @@ export const CnpjApiProvider = ({children}: any) => {
 	    setCnpjData(receivedData[0][0].cnpj_properties);
 	    setCnpjCountsData(receivedData[0][0].cnpj_counts);
 	  }
-	  isoData && fetchData();
-	}, [ isoData ]);
+	  polygonData && fetchData();
+	}, [ polygonData ]);
 
 	const getLabel: any = (object: any, value: any) => {
 		const currentKey: any = Object.keys(object).find(

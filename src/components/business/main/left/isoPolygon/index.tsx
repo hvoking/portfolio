@@ -3,14 +3,14 @@ import { SVGWrapper } from './svg';
 
 // Context imports
 import { useIsoPolygonApi } from '../../context/api/isoPolygon';
-import { useIsoApi } from '../../context/api/iso';
+import { usePolygonApi } from '../../context/api/polygon';
 import { useIsoSizes } from '../../context/sizes/iso';
 
 // Third-party imports
 import * as d3 from 'd3';
 
 export const IsoPolygonSVG = () => {
-	const { isoData } = useIsoApi();
+	const { polygonData } = usePolygonApi();
 	const { isoPolygonData } = useIsoPolygonApi();
 	const { innerWidth, innerHeight } = useIsoSizes();
 
@@ -18,7 +18,7 @@ export const IsoPolygonSVG = () => {
 
 	const projection = d3.geoIdentity()
 		.reflectY(true)
-		.fitSize([ innerWidth, innerHeight ], isoData[0].city_geom[0])
+		.fitSize([ innerWidth, innerHeight ], polygonData[0].city_geom[0])
 
 	const path = d3.geoPath(projection);
 
@@ -30,7 +30,7 @@ export const IsoPolygonSVG = () => {
 					stroke="rgba(255, 255, 255, 1)" 
 					strokeWidth={0.5}
 					className="feature" 
-					d={`${path(isoData[0].city_geom[0])}`}
+					d={`${path(polygonData[0].city_geom[0])}`}
 				/>
 				<path
 					fill="rgba(222, 112, 112, 0.8)"

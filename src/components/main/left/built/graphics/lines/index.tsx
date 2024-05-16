@@ -19,10 +19,9 @@ export const Lines = ({ xScale, minBound, maxBound, innerWidth, innerHeight }: a
         return total
     }, []);
 
-    const countAreas = (areas: any, lowerBound: any, upperBound: any) => {
+    const countAreas = (areas: any, lowerBound: any, upperBound: any, step: number) => {
       let counts: any = {};
       let currentRange = lowerBound;
-      const step = 50;
 
       while (currentRange <= upperBound) {
         const count = areas.filter((area: any) => area < currentRange && area > currentRange - step).length;
@@ -32,33 +31,33 @@ export const Lines = ({ xScale, minBound, maxBound, innerWidth, innerHeight }: a
       return counts;
     }
 
-    const countAreasObject = countAreas(parcelAreas, minBound, maxBound);
+    const step = 30;
+    const areasCount = countAreas(parcelAreas, minBound, maxBound, step);
 
-    const minCount: any = d3.min(Object.values(countAreasObject))
-    const maxCount: any = d3.max(Object.values(countAreasObject))
+    const minCount: any = d3.min(Object.values(areasCount))
+    const maxCount: any = d3.max(Object.values(areasCount))
 
     const yScale = d3.scaleLinear()
       .domain([ maxCount, minCount ])
       .range([ 10, innerHeight ]);
 
-    const entries: any = Object.entries(countAreasObject);
+    const entries: any = Object.entries(areasCount);
+    const currentWidth = innerWidth / entries.length;
 
     return (
         <>
-            <path
-                strokeWidth={0}
-                fill={fillColor}
-                d={
-                    `${
-                        d3.area()
-                            .x((d: any) => xScale(d[0]))
-                            .y0(yScale(0))
-                            .y1((d: any) => yScale(d[1]))
-                            .curve(d3.curveNatural)
-                            (entries)
-                    }`
-                } 
-            />
+            {Object.keys(areasCount).slice(0, -1).map((item: any, index: number) => {
+                return(
+                    
+                    <rect
+                        x={xScale(item) + 1}
+                        y={yScale(areasCount[item])}
+                        width={currentWidth - 2}
+                        height={innerHeight - yScale(areasCount[item])}
+                        fill={"rgba(126, 126, 132, 0.6)"}
+                    />
+                )
+            })}
             <path
                 strokeWidth={linesWidth}
                 stroke={linesColor}
@@ -66,7 +65,7 @@ export const Lines = ({ xScale, minBound, maxBound, innerWidth, innerHeight }: a
                 d={
                     `${
                         d3.line()
-                            .x((d: any) => xScale(d[0]))
+                            .x((d: any) => xScale(d[0]) + currentWidth / 2)
                             .y((d: any) => yScale(d[1]))
                             .curve(d3.curveNatural)
                             (entries)

@@ -10,7 +10,7 @@ import { Legend } from './legend';
 import { Wrapper } from './wrapper';
 
 // Context imports
-import { usePolygonDimensions } from '../../../context/filters/dimensions/polygon';
+import { useCircleDimensions } from '../../../context/filters/dimensions/circle';
 import { useRadiusSizes } from '../../../context/sizes/left/radius';
 
 // Third-party imports
@@ -19,7 +19,7 @@ import * as d3 from 'd3';
 export const Slider = () => {
   const [ activeForeground, setActiveForeground ] = useState(false);
   const { innerWidth, innerHeight } = useRadiusSizes();
-  const { radiusPosition, setRadiusPosition, setCircleRadius, minBound, maxBound } = usePolygonDimensions();
+  const { radiusPosition, setRadiusPosition, setCircleRadius, minBound, maxBound } = useCircleDimensions();
 
   const circleRadius = innerHeight / 6;
   const offset = 20;

@@ -2,16 +2,16 @@
 import { ParcelDimensionsProvider } from './parcel';
 import { ModuleDimensionsProvider } from './module';
 import { BuiltDimensionsProvider } from './built';
-import { PolygonDimensionsProvider } from './polygon';
+import { CircleDimensionsProvider } from './circle';
 
 export const DimensionsProvider = ({ children }: any) => {
 	return (
 		<ParcelDimensionsProvider>
 		<BuiltDimensionsProvider>
 		<ModuleDimensionsProvider>
-		<PolygonDimensionsProvider>
+		<CircleDimensionsProvider>
 			{children}
-		</PolygonDimensionsProvider>
+		</CircleDimensionsProvider>
 		</ModuleDimensionsProvider>
 		</BuiltDimensionsProvider>
 		</ParcelDimensionsProvider>

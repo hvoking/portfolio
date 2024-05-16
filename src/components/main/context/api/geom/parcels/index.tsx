@@ -2,7 +2,7 @@
 import { useState, useEffect, useContext, createContext } from 'react';
 
 // Context imports
-import { usePolygonApi } from '../../../api/geom/polygon';
+import { useCircleApi } from '../../../api/geom/circle';
 
 const ParcelsApiContext: React.Context<any> = createContext(null)
 
@@ -11,7 +11,7 @@ export const useParcelsApi = () => {
 }
 
 export const ParcelsApiProvider = ({children}: any) => {
-	const { polygonData } = usePolygonApi();
+	const { circleData } = useCircleApi();
 	const [ parcelsData, setParcelsData ] = useState<any>(null);
 
 	useEffect(() => {
@@ -25,8 +25,8 @@ export const ParcelsApiProvider = ({children}: any) => {
 	    const receivedData = await res.json();
 	    setParcelsData(receivedData[0][0]);
 	  }
-	  polygonData && fetchData();
-	}, [ polygonData ]);
+	  circleData && fetchData();
+	}, [ circleData ]);
 
 	return (
 		<ParcelsApiContext.Provider value={{ parcelsData }}>

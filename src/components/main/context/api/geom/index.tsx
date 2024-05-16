@@ -1,13 +1,13 @@
 // App imports
 import { DrainApiProvider } from './drain';
 import { ParcelsApiProvider } from './parcels';
-import { PolygonApiProvider } from './polygon';
+import { CircleApiProvider } from './circle';
 import { ParcelsCurvesApiProvider } from './curves/parcels';
 import { ParcelCurvesApiProvider } from './curves/parcel';
 
 export const GeomApiProvider = ({ children }: any) => {
 	return (
-		<PolygonApiProvider>
+		<CircleApiProvider>
 		<ParcelsApiProvider>
 		<DrainApiProvider>
 		<ParcelsCurvesApiProvider>
@@ -17,7 +17,7 @@ export const GeomApiProvider = ({ children }: any) => {
 		</ParcelsCurvesApiProvider>
 		</DrainApiProvider>
 		</ParcelsApiProvider>
-		</PolygonApiProvider>
+		</CircleApiProvider>
 	)
 }
 

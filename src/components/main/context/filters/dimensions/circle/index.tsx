@@ -4,20 +4,20 @@ import { useState, useEffect, useContext, createContext } from 'react';
 // Context imports
 import { useGeo } from '../../geo';
 
-const PolygonDimensionsContext: React.Context<any> = createContext(null)
+const CircleDimensionsContext: React.Context<any> = createContext(null)
 
-export const usePolygonDimensions = () => {
+export const useCircleDimensions = () => {
 	return (
-		useContext(PolygonDimensionsContext)
+		useContext(CircleDimensionsContext)
 	)
 }
 
-export const PolygonDimensionsProvider = ({children}: any) => {
+export const CircleDimensionsProvider = ({children}: any) => {
 	const { placeCoordinates } = useGeo();
 
 	const [ radiusPosition, setRadiusPosition ] = useState(0.005);
 	const [ circleRadius, setCircleRadius ] = useState(0.005);
-	const [ polygonGeometry, setPolygonGeometry ] = useState<any>(null);
+	const [ circleGeometry, setCircleGeometry ] = useState<any>(null);
 	const minBound = 0.001;
 	const maxBound = 0.01;
 
@@ -56,19 +56,19 @@ export const PolygonDimensionsProvider = ({children}: any) => {
 
 	useEffect(() => {
 		const res = createCircle(centerCoord, circleRadius, circlePoints);
-		setPolygonGeometry(res);
+		setCircleGeometry(res);
 	}, [ placeCoordinates, circleRadius ]);
 
 	return (
-		<PolygonDimensionsContext.Provider value={{ 
-			polygonGeometry, 
+		<CircleDimensionsContext.Provider value={{ 
+			circleGeometry, 
 			circleRadius, setCircleRadius,
 			radiusPosition, setRadiusPosition,
 			maxBound, minBound
 		}}>
 			{children}
-		</PolygonDimensionsContext.Provider>
+		</CircleDimensionsContext.Provider>
 	)
 }
 
-PolygonDimensionsContext.displayName = "PolygonDimensionsContext";
+CircleDimensionsContext.displayName = "CircleDimensionsContext";

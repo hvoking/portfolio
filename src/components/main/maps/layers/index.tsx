@@ -3,7 +3,7 @@ import { useParcels } from '../../context/maps/layers/parcels';
 import { useEnvelop } from '../../context/maps/layers/envelop';
 import { useDrain } from '../../context/maps/layers/drain';
 import { useCurves } from '../../context/maps/layers/curves';
-import { usePolygonLayer } from '../../context/maps/layers/polygon';
+import { useCircle } from '../../context/maps/layers/circle';
 import { useBuildingLayer } from '../../context/maps/layers/building';
 
 // Third-party imports
@@ -19,14 +19,14 @@ const DeckGLOverlay = (props: DeckProps) => {
 
 export const Layers = () => {
 	const { parcelsPolygon } = useParcels();
-	const { polygonLayer } = usePolygonLayer();
+	const { circleLayer } = useCircle();
 	const { curvesLayer } = useCurves();
 	const { drainLayer } = useDrain();
 	const { envelopLayer } = useEnvelop();
 	const { buildingLayer } = useBuildingLayer();
 
 	const layers = [ 
-		polygonLayer, 
+		circleLayer, 
 		parcelsPolygon,
 		drainLayer,
 		curvesLayer,

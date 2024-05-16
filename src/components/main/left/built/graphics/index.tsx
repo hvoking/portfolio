@@ -1,17 +1,17 @@
 // App imports
 import { SVGWrapper } from './svg';
-import { Lines } from './lines';
+import { Bars } from './bars';
 import { Foreground } from './foreground';
 import { Wrapper } from './wrapper';
 
 // Context imports
 import { useBuiltDimensions } from '../../../context/filters/dimensions/built';
-import { useLinesSizes } from '../../../context/sizes/left/lines';
+import { useBarsSizes } from '../../../context/sizes/left/bars';
 
 import * as d3 from 'd3';
 
 export const Graphics = ({ activeForeground, setActiveForeground }: any) => {
-  const { innerWidth, innerHeight } = useLinesSizes();
+  const { innerWidth, innerHeight } = useBarsSizes();
   const { minBound, maxBound, leftPosition, setLeftPosition, rightPosition, setRightPosition } = useBuiltDimensions();
 
   const offset = 20;
@@ -23,7 +23,7 @@ export const Graphics = ({ activeForeground, setActiveForeground }: any) => {
   return (
     <div style={{overflow: "hidden"}}>
       <SVGWrapper>
-        <Lines
+        <Bars
           xScale={xScale}
           minBound={minBound} 
           maxBound={maxBound} 

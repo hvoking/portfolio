@@ -1,13 +1,11 @@
 // Context imports
 import { useParcelsApi } from '../../../../context/api/geom/parcels';
-import { useStyleSheet } from '../../../../context/filters/stylesheet';
 
 // Third party imports
 import * as d3 from 'd3';
 
-export const Lines = ({ xScale, minBound, maxBound, innerWidth, innerHeight }: any) => {
+export const Bars = ({ xScale, minBound, maxBound, innerWidth, innerHeight }: any) => {
     const { parcelsData } = useParcelsApi();
-    const { linesColor, linesWidth, fillColor } = useStyleSheet();
 
     if (!parcelsData) return <></>;
 
@@ -58,22 +56,8 @@ export const Lines = ({ xScale, minBound, maxBound, innerWidth, innerHeight }: a
                     />
                 )
             })}
-            <path
-                strokeWidth={linesWidth}
-                stroke={linesColor}
-                fill="none"
-                d={
-                    `${
-                        d3.line()
-                            .x((d: any) => xScale(d[0]) + currentWidth / 2)
-                            .y((d: any) => yScale(d[1]))
-                            .curve(d3.curveNatural)
-                            (entries)
-                    }`
-                } 
-            />
         </>
     )
 }
 
-Lines.displayName="Lines"
+Bars.displayName="Bars"

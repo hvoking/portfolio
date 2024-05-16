@@ -1,15 +1,15 @@
 // React imports
 import { useState, useContext, createContext } from 'react';
 
-const LinesSizesContext: React.Context<any> = createContext(null)
+const BarsSizesContext: React.Context<any> = createContext(null)
 
-export const useLinesSizes = () => {
+export const useBarsSizes = () => {
 	return (
-		useContext(LinesSizesContext)
+		useContext(BarsSizesContext)
 	)
 }
 
-export const LinesSizesProvider = ({children}: any) => {
+export const BarsSizesProvider = ({children}: any) => {
 	const [ width, setWidth ] = useState<any>(null);
 	const [ height, setHeight ] = useState<any>(null);
 
@@ -19,7 +19,7 @@ export const LinesSizesProvider = ({children}: any) => {
 	const innerHeight = height - margin.top - margin.bottom;
 
 	return (
-		<LinesSizesContext.Provider value={{
+		<BarsSizesContext.Provider value={{
 			margin,
 			width,
 			height,
@@ -29,8 +29,8 @@ export const LinesSizesProvider = ({children}: any) => {
 			innerHeight,
 		}}>
 			{children}
-		</LinesSizesContext.Provider>
+		</BarsSizesContext.Provider>
 	)
 }
 
-LinesSizesContext.displayName = "LinesSizesContext";
+BarsSizesContext.displayName = "BarsSizesContext";

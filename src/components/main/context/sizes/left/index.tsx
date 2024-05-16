@@ -1,6 +1,6 @@
 // App imports
 import { SliderSizesProvider } from './slider';
-import { LinesSizesProvider } from './lines';
+import { BarsSizesProvider } from './bars';
 import { CircleSizesProvider } from './circle';
 import { RadiusSizesProvider } from './radius';
 
@@ -8,11 +8,11 @@ export const LeftSizesProvider = ({children}: any) => {
   return (
     <CircleSizesProvider>
     <SliderSizesProvider>
-    <LinesSizesProvider>
+    <BarsSizesProvider>
     <RadiusSizesProvider>
       {children}
     </RadiusSizesProvider>
-    </LinesSizesProvider>
+    </BarsSizesProvider>
     </SliderSizesProvider>
     </CircleSizesProvider>
   )

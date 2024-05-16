@@ -2,10 +2,10 @@
 import { useCallback, Children, cloneElement } from 'react';
 
 // Context imports
-import { useLinesSizes } from '../../../../context/sizes/left/lines';
+import { useBarsSizes } from '../../../../context/sizes/left/bars';
 
 export const SVGWrapper = ({ children }: any) => {
-	const { margin, width, height, setWidth, setHeight } = useLinesSizes();
+	const { margin, width, height, setWidth, setHeight } = useBarsSizes();
 
 	const parentRef = useCallback((node: any)=> {
 	    if (node) {

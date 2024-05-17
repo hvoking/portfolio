@@ -9,13 +9,7 @@ export const Bars = ({ xScale, minBound, maxBound, innerWidth, innerHeight }: an
 
     if (!parcelsData) return <></>;
 
-    const parcelAreas = parcelsData.reduce((total: any, item: any) => {
-        const currentArea = item.constructed_area;
-        if (currentArea < maxBound) {
-            total.push(currentArea)
-        }
-        return total
-    }, []);
+    const parcelAreas = parcelsData.map((item: any) => item.constructed_area < maxBound && item.constructed_area);
 
     const countAreas = (areas: any, lowerBound: any, upperBound: any, step: number) => {
       let counts: any = {};
@@ -32,15 +26,15 @@ export const Bars = ({ xScale, minBound, maxBound, innerWidth, innerHeight }: an
     const step = 30;
     const areasCount = countAreas(parcelAreas, minBound, maxBound, step);
 
-    const minCount: any = d3.min(Object.values(areasCount))
-    const maxCount: any = d3.max(Object.values(areasCount))
+    const countValues: number[] = Object.values(areasCount);
+    const minCount: any = d3.min(countValues);
+    const maxCount: any = d3.max(countValues);
+
+    const currentWidth = innerWidth / countValues.length;
 
     const yScale = d3.scaleLinear()
       .domain([ maxCount, minCount ])
       .range([ 10, innerHeight ]);
-
-    const entries: any = Object.entries(areasCount);
-    const currentWidth = innerWidth / entries.length;
 
     return (
         <>

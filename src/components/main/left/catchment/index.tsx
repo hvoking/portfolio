@@ -15,7 +15,7 @@ import * as d3 from 'd3';
 export const Catchment = ({ polygonArea, polygon }: any) => {
 	const { innerWidth, innerHeight } = useCircleSizes();
 	const { maxBound, radiusPosition } = useCircleDimensions();
-	const { linesColor, linesWidth, fillColor } = useStyleSheet();
+	const { fillColor } = useStyleSheet();
 
 	const r: any = d3.min([innerWidth / 2, innerHeight / 2])
 
@@ -33,8 +33,6 @@ export const Catchment = ({ polygonArea, polygon }: any) => {
 							cy={ innerHeight / 2}
 							r={xScale(radiusPosition * 1000)}
 							fill={fillColor}
-							stroke={linesColor}
-							strokeWidth={linesWidth}
 						/>
 					</SVGWrapper>
 					<div className="distance-info">

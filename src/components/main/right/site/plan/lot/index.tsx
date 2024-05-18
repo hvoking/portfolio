@@ -1,11 +1,12 @@
 // Context imports
 import { useStyleSheet } from '../../../../context/filters/stylesheet';
 
-export const Lot = ({ path, currentLot }: any) => {
-	const { linesColor, linesWidth, fillColor } = useStyleSheet();
+export const Lot = ({ path, currentLot, ocioso }: any) => {
+	const { linesColor, linesWidth } = useStyleSheet();
+
 	return (
 		<path
-			fill={fillColor}
+			fill={ocioso == 1 ? "rgba(255, 255, 0, 0.2)" : "rgba(0, 255, 0, 0.2)"}
 			stroke={linesColor} 
 			strokeWidth={linesWidth}
 			className="feature" 

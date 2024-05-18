@@ -8,7 +8,7 @@ import { Legend } from './legend';
 // Context imports
 import { useEnvelopApi } from '../../../context/api/parcel/envelop';
 import { useParcelSizes } from '../../../context/sizes/right/parcel';
-import { useLotApi } from '../../../context/api/parcel/lot';
+import { useSiteApi } from '../../../context/api/parcel/site';
 
 // Third-party imports
 import * as d3 from 'd3';
@@ -16,9 +16,10 @@ import * as d3 from 'd3';
 export const Plan = () => {
 	const { envelopData } = useEnvelopApi();
 	const { innerWidth, innerHeight } = useParcelSizes();
-	const { lotData } = useLotApi();
+	const { siteData } = useSiteApi();
 
-	const parcelArea = lotData.parcel_area;
+	const siteArea = siteData.area;
+	const ocioso = siteData.ocioso;
 
 	const projection = d3.geoIdentity()
 		.reflectY(true)
@@ -29,7 +30,7 @@ export const Plan = () => {
 	return (
 		<SVGWrapper>
 			<North/>
-			<Lot path={path} currentLot={envelopData}/>
+			<Lot path={path} currentLot={envelopData} ocioso={ocioso}/>
 			<Curves path={path}/>
 			<Legend innerHeight={innerHeight}/>
 		</SVGWrapper>

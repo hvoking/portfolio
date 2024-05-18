@@ -4,38 +4,38 @@ import { useState, useEffect, useContext, createContext } from 'react';
 // Context imports
 import { useGeo } from '../../../filters/geo';
 
-const LotApiContext: React.Context<any> = createContext(null);
+const SiteApiContext: React.Context<any> = createContext(null);
 
-export const useLotApi = () => {
+export const useSiteApi = () => {
 	return (
-		useContext(LotApiContext)
+		useContext(SiteApiContext)
 	)
 }
 
-export const LotApiProvider = ({children}: any) => {
+export const SiteApiProvider = ({children}: any) => {
   const { parcelId } = useGeo();
-  const [ lotData, setLotData ] = useState<any>(null);
+  const [ siteData, setSiteData ] = useState<any>(null);
   
   useEffect(() => {
     const fetchData = async () => {
       const tempUrl = `
         ${process.env.REACT_APP_API_URL}/
-        parcel_api
+        site_api
         ?parcel_id=${parcelId}
       `;
       const url = tempUrl.replace(/\s/g, '');
       const res = await fetch(url);
       const receivedData = await res.json();
-      setLotData(receivedData)
+      setSiteData(receivedData)
     }
     fetchData();
   }, [ parcelId ]);
 
   return (
-		<LotApiContext.Provider value={{ lotData }}>
+		<SiteApiContext.Provider value={{ siteData }}>
 			{children}
-		</LotApiContext.Provider>
+		</SiteApiContext.Provider>
 	)
 }
 
-LotApiContext.displayName="LotApiContext";
+SiteApiContext.displayName="SiteApiContext";

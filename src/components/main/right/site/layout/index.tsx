@@ -8,7 +8,7 @@ import { Legend } from './legend';
 // Context imports
 import { useLayoutSizes } from '../../../context/sizes/right/layout';
 import { useVectors } from '../../../context/filters/vectors';
-import { useLotApi } from '../../../context/api/parcel/lot';
+import { useSiteApi } from '../../../context/api/parcel/site';
 import { useBuildingApi } from '../../../context/api/parcel/building';
 
 // Third-party imports
@@ -19,12 +19,12 @@ export const Layout = ({ parcelData }: any) => {
 	const { innerWidth, innerHeight } = useLayoutSizes();
 	
 	const { buildingData } = useBuildingApi();
-	const { lotData } = useLotApi();
+	const { siteData } = useSiteApi();
 
-	if (!lotData || !buildingData) return <></>
+	if (!siteData || !buildingData) return <></>
 
-	const distRight = Math.round(lotData.parcel_side);
-	const distLeft = Math.round(lotData.parcel_front);
+	const distRight = Math.round(siteData.side);
+	const distLeft = Math.round(siteData.front);
 
 	const rightWidth = Math.abs(iRight * distRight);
 	const leftWidth = Math.abs(iLeft * distLeft);

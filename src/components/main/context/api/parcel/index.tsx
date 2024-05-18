@@ -1,12 +1,12 @@
 // App imports
 import { BuildingApiProvider } from './building';
-import { LotApiProvider } from './lot';
+import { SiteApiProvider } from './site';
 import { ZoneApiProvider } from './zone';
 import { EnvelopApiProvider } from './envelop';
 
 export const ParcelApiProvider = ({ children }: any) => {
 	return (
-		<LotApiProvider>
+		<SiteApiProvider>
 		<EnvelopApiProvider>
 		<ZoneApiProvider>
 		<BuildingApiProvider>
@@ -14,7 +14,7 @@ export const ParcelApiProvider = ({ children }: any) => {
 		</BuildingApiProvider>
 		</ZoneApiProvider>
 		</EnvelopApiProvider>
-		</LotApiProvider>
+		</SiteApiProvider>
 	)
 }
 

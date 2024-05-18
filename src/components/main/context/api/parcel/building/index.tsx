@@ -5,7 +5,7 @@ import { useState, useEffect, useContext, createContext } from 'react';
 import { useModuleDimensions } from '../../../filters/dimensions/module';
 import { useBuilding } from '../../../filters/building';
 import { useZoneApi } from '../zone';
-import { useLotApi } from '../lot';
+import { useSiteApi } from '../site';
 
 const BuildingApiContext: React.Context<any> = createContext(null);
 
@@ -19,12 +19,12 @@ export const BuildingApiProvider = ({children}: any) => {
   const { apartmentSide, apartmentFront, apartmentHeight } = useModuleDimensions();
   const { garages } = useBuilding();
   const { zoneData } = useZoneApi();
-  const { lotData } = useLotApi();
+  const { siteData } = useSiteApi();
 
   const [ buildingData, setBuildingData ] = useState<any>(null);
 
-  const parcelFront = lotData && lotData.parcel_front;
-  const occupancyRate = zoneData && lotData && zoneData.occupancy_rate * lotData.parcel_area;
+  const parcelFront = siteData && siteData.front;
+  const occupancyRate = zoneData && siteData && zoneData.occupancy_rate * siteData.area;
   const zoneHeight = zoneData && zoneData.height;
   
   useEffect(() => {
@@ -45,8 +45,8 @@ export const BuildingApiProvider = ({children}: any) => {
       const receivedData = await res.json();
       setBuildingData(receivedData)
     }
-    zoneData && lotData && fetchData();
-  }, [ zoneData, lotData, apartmentSide, apartmentFront, apartmentHeight ]);
+    zoneData && siteData && fetchData();
+  }, [ zoneData, siteData, apartmentSide, apartmentFront, apartmentHeight ]);
 
   return (
 		<BuildingApiContext.Provider value={{ buildingData }}>

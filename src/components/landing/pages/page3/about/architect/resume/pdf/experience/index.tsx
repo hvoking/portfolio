@@ -21,49 +21,26 @@ export const Experience = () => {
 		        </div>
 	        </div>
 	        <p style={{paddingLeft: "20px", paddingBottom: "10px", color: "rgba(0, 0, 0, 0.8)"}}>
-	        	Drove the implementation of computational design workflows. 
-        		Utilizing PostgreSQL for data management, 
-        		Django for backend development, 
-        		and React for user interfaces.
-        		Successfully deploying applications to the AWS cloud with continuous integration.
+	        	Led Computational Design Workflow Implementation: Utilized PostgreSQL for data management, Django for backend development, and React for user interfaces. Successfully deployed applications to AWS cloud with continuous integration, significantly improving project delivery times and system performance.
         	</p>
 	        <ul className="resume-list">
 	        	<li>
-	        		Provided actionable insights 
-	        		to real estate agents 
-	        		through an interactive dashboard 
-	        		for visualizing classified data
-	        		collected from 837 real estate agencies;
+	        		Delivered Data-Driven Insights: Developed an interactive dashboard that provided actionable insights for real estate agents by visualizing classified data from 837 agencies, enhancing data interpretation and decision-making processes;
 	        	</li>
 	        	<li>
-	        		Developed a spatial analytics tool 
-	        		that instantly generates a 3D representation of zone regulations, 
-	        		facilitating zoning analysis
-	        		for architects who perform this task repetitively;
+	        		Streamlined Zoning Analysis: Created a spatial analytics tool that generates instant 3D representations of zoning regulations based on lot geometry, reducing the time architects spend on repetitive zoning tasks and improving accuracy;
 	        	</li>
 	        	<li>
-	        		Overcame data limitations by centralizing 16GB of urban data from 24 municipalities,
-	        		including transportation, environmental features, and buildings, 
-	        		using web scraping and GIS tools;
+	        		Centralized Urban Data: Overcame data limitations by centralizing 16GB of urban data from 24 municipalities, integrating transportation, environmental features, and building information using web scraping and GIS tools, thus facilitating comprehensive urban planning analysis;
 	        	</li>
 	        	<li>
-	        		Revitalized an underutilized database 
-	        		by implementing geolocation for over 200K properties,
-	        		each with comprehensive metadata, 
-	        		resulting in a cost-saving of $40,000 at 20 cents per point;
+	        		Optimized Geolocation Data: Revitalized an underutilized database by implementing geolocation for over 200,000 properties, resulting in a $40,000 cost-saving and transforming the database into a valuable asset for real estate market analysis;
 	        	</li>
 	        	<li>
-	        		Prototyped sharp and interactive interfaces, 
-	        		using parametrized scalable vector graphics (SVG), 
-	        		optimizing cross-browser and multi-platform compatibility 
-	        		by reusing modular components.
+	        		Enhanced User Interfaces: Prototyped interactive and visually appealing interfaces using parametrized scalable vector graphics (SVG), ensuring cross-browser and multi-platform compatibility through the reuse of modular components;
 	        	</li>
 	        	<li>
-	        		Slashed 2 hours of daily repetitive tasks 
-	        		by automating data transfers, 
-	        		integrating third-party databases into PostgreSQL 
-	        		via ETL methodologies, 
-	        		and utilizing Celery for task management;
+	        		Automated Data Transfers: Automated 2 hours of daily repetitive tasks by integrating third-party databases into PostgreSQL using ETL methodologies and task management with Celery, significantly improving operational efficiency.
 	        	</li>
 	        	{/*
 	        	<li>Enabled a user-friendly interface for a machine learning-driven property price calculator.</li>

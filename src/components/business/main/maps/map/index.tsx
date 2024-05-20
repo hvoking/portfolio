@@ -33,7 +33,7 @@ export const MapContainer = () => {
 	const { citiesLayer } = useCitiesLayer();
 	const { isoLayer } = useIsoLayer();
 
-	const layers: any = [ citiesLayer, isoLayer ];
+	const layers: any = [ citiesLayer ];
 
 	const onDblClick = useCallback((e: any) => {
 		const lng = e.lngLat.lng;

@@ -7,10 +7,10 @@ export const Summary = () => {
 			Highly productive Computational Designer, 
 			specializing in seamlessly integrating web technologies 
 			into architectural and urban design. 
-			My work revolves around creating web applications 
+			My work revolves around creating parametric applications 
 			with stunning graphical interfaces 
-			and precise geometric representations. 
-			These applications effectively convey information, 
+			and precise geometric representations 
+			that effectively convey information, 
 			with an emphasis on interactivity and geolocation.
 		</p>
 	)

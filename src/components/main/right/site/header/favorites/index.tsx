@@ -2,11 +2,11 @@
 import './styles.scss';
 
 // Context imports
-import { usePdf } from '../../../../context/pdf';
+import { useVisibility } from '../../../../context/filters/visibility';
 import { useGoogleReverseApi } from '../../../..//context/api/google/reverse';
  
 export const Favorites = ({ inputRef }: any) => {
-	const { activePdf, setActivePdf } = usePdf();
+	const { activePdf, setActivePdf } = useVisibility();
 	const { parcelsProperties } = useGoogleReverseApi();
 
 	const onClick = () => {

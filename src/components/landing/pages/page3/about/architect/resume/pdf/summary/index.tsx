@@ -4,14 +4,10 @@ import './styles.scss';
 export const Summary = () => {
 	return (
 		<p className="resume-summary">
-			Highly productive Computational Designer, 
-			specializing in seamlessly integrating web technologies 
-			into architectural and urban design. 
-			My work revolves around creating parametric applications 
-			with stunning graphical interfaces 
-			and precise geometric representations 
-			that effectively convey information, 
-			with an emphasis on interactivity and geolocation.
+			Computational Designer with +3 years of experience 
+			integrating web solutions into architectural and urban design. 
+			My work revolves around creating parametric applications with precise graphics, 
+			emphasizing interactivity and location technologies.
 		</p>
 	)
 }

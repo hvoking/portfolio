@@ -4,11 +4,11 @@ import './styles.scss';
 
 // Context imports
 import { useGoogleReverseApi } from '../context/api/google/reverse';
-import { usePdf } from '../context/pdf';
+import { useVisibility } from '../context/filters/visibility';
 
 export const Pdf = () => {
 	const { parcelsProperties } = useGoogleReverseApi();
-	const { page1Ref, activePdf, setActivePdf } = usePdf();
+	const { activePdf, setActivePdf } = useVisibility();
 	const parcelsLength = Object.keys(parcelsProperties).length;
 
 	let vh = window.innerHeight * 0.01;
@@ -26,7 +26,7 @@ export const Pdf = () => {
 					onClick={() => setActivePdf(false)}
 					tabIndex={0}
 				>
-					<div ref={page1Ref} className="pdf-page1-wrapper">
+					<div className="pdf-page1-wrapper">
 						<div className="pdf-title">Parcel Portfolio Overview</div>
 						<div className="parcel-list-title">
 							Selected parcels: {parcelsLength} {parcelsLength === 1  ? "parcel" : "parcels"}

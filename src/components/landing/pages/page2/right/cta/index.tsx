@@ -9,7 +9,7 @@ export const CTA = () => {
 
 	const onClick= () => {
 		if (currentWork === "jukka") {
-			window.open(`${window.location.origin}/#/parcel-analyzer`)
+			window.open(`${window.location.origin}/#/parcels`)
 		}
 		else if (currentWork === "m2b") {
 			window.open(`https://generativa.io/#/m2b`)

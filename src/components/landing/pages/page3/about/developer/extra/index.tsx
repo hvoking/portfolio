@@ -30,7 +30,7 @@ export const ExtraTools = ({ setExtraTools }: any) => {
 							src="static/components/landing/extra/0.jpg" 
 							alt="business" 
 							width="100%"
-							onClick={() => window.open(`${window.location.origin}/#/business`)}
+							onClick={() => window.open(`https://ugeom.com/`)}
 						/>
 						<div>
 							Clusters of Santa Catarina's business landscape,

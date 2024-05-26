@@ -24,7 +24,7 @@ export const Cards = () => {
 				src="static/components/landing/devices/jukka.gif"
 				work="jukka"
 				description="Geometry from parcel selection"
-				path={`${window.location.origin}/#/parcel-analyzer`}
+				path={`${window.location.origin}/#/parcels`}
 			/>
 			<Card 
 				setCurrentWork={setCurrentWork} 

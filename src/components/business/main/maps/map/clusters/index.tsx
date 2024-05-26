@@ -9,6 +9,7 @@ import { useRetailClusters } from '../../../context/maps/clusters/retail';
 // App imports
 import { Unclustered } from './unclustered';
 import { Clustered } from './clustered';
+import { IsoPolygon } from './iso';
 
 export const Clusters = () => {
 	const { cnpjData, cnpjProperties } = useCnpjApi();
@@ -40,6 +41,7 @@ export const Clusters = () => {
 
 	return (
 		<>
+			<IsoPolygon/>
 			<Unclustered 
 				cnpjData={cnpjData} 
 				getColor={getColor} 

@@ -20,19 +20,36 @@ export const useIsoLayer = () => {
 export const IsoLayerProvider = ({children}: any) => {
 	const { isoPolygonData } = useIsoPolygonApi();
 
-	const isoLayer = isoPolygonData &&
-		new GeoJsonLayer({
-			id: 'iso-polygon-geojson',
-			pickable: true,
-			data: isoPolygonData.features[0].geometry,
-			getFillColor: [222, 112, 112, 120],
-			getLineColor: [126, 126, 132, 255],
-			getLineWidth: 10,
-			parameters: { depthTest: false },
-		});
+	const isoLayer = {
+	    id: 'isolayer',
+	    type: 'fill',
+	    source: 'isoSource',
+	    paint: {
+	      'fill-color': 'rgb(222, 112, 112)',
+	      'fill-opacity': 0.8,
+	    },
+	  };
+
+	const isoSource = {
+	    type: 'geojson',
+	    data: {
+	      type: 'FeatureCollection',
+	      features: [
+	        {
+	          type: 'Feature',
+	          geometry: {
+	            type: 'Polygon',
+	            coordinates: isoPolygonData ? 
+	            isoPolygonData.features[0].geometry.coordinates
+	            : [],
+	          },
+	        },
+	      ],
+	    },
+	  };
 
 	return (
-		<IsoLayerContext.Provider value={{ isoLayer }}>
+		<IsoLayerContext.Provider value={{ isoLayer, isoSource }}>
 			{children}
 		</IsoLayerContext.Provider>
 	)

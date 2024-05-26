@@ -2,7 +2,6 @@
 import { Source, Layer } from 'react-map-gl';
 
 export const Clustered = ({ cnpjData, cnpjProperties, getLabel, label, clusterLayer, countLayer }: any) => {
-	
 	const geojsonPoints: any = cnpjData && cnpjData.reduce((total: any, item: any) => {
 		if (getLabel(cnpjProperties, item.cnae_divisao) === label) {
 			total.push({
@@ -28,17 +27,17 @@ export const Clustered = ({ cnpjData, cnpjProperties, getLabel, label, clusterLa
 	}
 
 	return (
-		<Source
-		  id={`${label}-clusters`}
-		  type="geojson"
-		  data={geojsonWrapper}
-		  cluster={true}
-		  clusterMaxZoom={14}
-		  clusterRadius={100}
-		>
-		  <Layer {...clusterLayer}/>
-		  <Layer {...countLayer}/>
-		</Source>
+			<Source
+			  id={`${label}-clusters`}
+			  type="geojson"
+			  data={geojsonWrapper}
+			  cluster={true}
+			  clusterMaxZoom={14}
+			  clusterRadius={100}
+			>
+				<Layer {...clusterLayer}/>
+				<Layer {...countLayer}/>
+			</Source>
 	)
 }
 

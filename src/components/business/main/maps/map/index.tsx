@@ -7,7 +7,6 @@ import { Clusters } from './clusters';
 
 // Layers imports
 import { useCitiesLayer } from '../../context/maps/layers/cities';
-import { useIsoLayer } from '../../context/maps/layers/iso';
 
 // Context imports
 import { useMapbox } from '../../context/maps/mapbox';
@@ -31,7 +30,6 @@ export const MapContainer = () => {
 
 	// Layers
 	const { citiesLayer } = useCitiesLayer();
-	const { isoLayer } = useIsoLayer();
 
 	const layers: any = [ citiesLayer ];
 

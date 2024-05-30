@@ -5,9 +5,9 @@ import { Headline } from './headline';
 import { Email } from './email';
 import './styles.scss';
 
-export const Left = ({ parentRef }: any) => {
+export const Left = () => {
 	return (
-		<div className="page1-left" ref={parentRef}>
+		<div className="page1-left">
 			<Headline/>
 			<Description/>
 			<Buttons/>

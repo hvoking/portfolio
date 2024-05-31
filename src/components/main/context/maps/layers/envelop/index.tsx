@@ -59,18 +59,21 @@ export const EnvelopProvider = ({children}: any) => {
 				getLineWidth: 0,
 				parameters: { depthTest: false },
 			})
-		}).concat(envelopLines.map((item: any, index: any) => {
+		})
+	]
+	const envelopLinesLayer = [
+		envelopLines.map((item: any, index: any) => {
 			return new GeoJsonLayer({
 				id: `envelop-lines-${index}`,
 				data: turf.featureCollection(item),
 				getLineColor: strokeColor.map((item: any) => parseInt(item)),
 				getLineWidth: linesWidth,
 			})
-		}))
+		})
 	]
 
 	return (
-		<EnvelopContext.Provider value={{ envelopLayer }}>
+		<EnvelopContext.Provider value={{ envelopLayer, envelopLinesLayer }}>
 			{children}
 		</EnvelopContext.Provider>
 	)

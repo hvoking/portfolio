@@ -8,8 +8,8 @@ import { useBuildingLayer } from '../../context/maps/layers/building';
 
 // Third-party imports
 import { useControl } from 'react-map-gl';
-import { MapboxOverlay } from '@deck.gl/mapbox/typed';
-import { DeckProps } from '@deck.gl/core/typed';
+import { MapboxOverlay } from '@deck.gl/mapbox';
+import { DeckProps } from '@deck.gl/core';
 
 const DeckGLOverlay = (props: DeckProps) => {
   const deck = useControl<any>(() => new MapboxOverlay(props));
@@ -22,7 +22,7 @@ export const Layers = () => {
 	const { circleLayer } = useCircle();
 	const { curvesLayer } = useCurves();
 	const { drainLayer } = useDrain();
-	const { envelopLayer } = useEnvelop();
+	const { envelopLayer, envelopLinesLayer } = useEnvelop();
 	const { buildingLayer } = useBuildingLayer();
 
 	const layers = [ 
@@ -32,6 +32,7 @@ export const Layers = () => {
 		curvesLayer,
 		buildingLayer,
 		envelopLayer,
+		envelopLinesLayer,
 	];
 
 	return (

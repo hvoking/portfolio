@@ -1,13 +1,35 @@
 // App imports
 import './styles.scss';
 
+// Third-party imports
+import { useNavigate } from 'react-router-dom';
+
 export const Logo = () => {
+	const navigate = useNavigate();
+
+	const onClick = () => {
+		navigate('/');
+	}
+	
 	return (
-		<img 
-			className="gnrt-logo" 
-			src="static/logos/gnrt/generativa.svg" 
-			alt="generativa-logo"
-		/>
+		<div className="logo-wrapper" onClick={onClick}>
+			<img 
+				className="logo" 
+				src="static/logos/white.svg" 
+				alt="logo"
+				style={{paddingLeft: "20px"}}
+			/>
+			<div className="logo-text">
+				<div>
+					<div className="logo-name">
+						Gustavo Gonzalez
+					</div>
+					<div className="logo-profession">
+						Computational Designer
+					</div>
+				</div>
+			</div>
+		</div>
 	)
 }
 

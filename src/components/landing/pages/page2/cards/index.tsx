@@ -15,7 +15,7 @@ export const Cards = () => {
 				currentWork={currentWork}
 				src="static/components/landing/devices/m2b.gif"
 				work="m2b"
-				description="Brazilian Real Estate Market Insights"
+				description="Brazilian Real Estate Market"
 				path={`https://generativa.io/#/m2b`}
 			/>
 			<Card 
@@ -23,7 +23,7 @@ export const Cards = () => {
 				currentWork={currentWork}
 				src="static/components/landing/devices/jukka.gif"
 				work="jukka"
-				description="Geometry from parcel selection"
+				description="Geometry from lot selection"
 				path={`${window.location.origin}/#/parcels`}
 			/>
 			<Card 
@@ -31,7 +31,7 @@ export const Cards = () => {
 				currentWork={currentWork}
 				src="static/components/landing/devices/grass.gif"
 				work="grass"
-				description="Copy of Rhino Grasshopper for the web"
+				description="Copy of Rhino Grasshopper"
 				path={`https://github.com/hvoking/grasshopper`}
 			/>
 		</div>

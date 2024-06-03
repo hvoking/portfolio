@@ -18,12 +18,13 @@ export const Card = ({ currentWork, setCurrentWork, path, work, src, description
 	}
 	return (
 		<div className="card-wrapper" onClick={onClick}>
+			
 			<div style={{display: "flex", justifyContent: "space-between"}}>
 				<div 
-					className="pages-subtitle" 
-					style={{opacity: getOpacity()}}
+					className="pages-description" 
+					style={{color: "rgba(255, 255, 255, 1)", opacity: getOpacity(), paddingTop: "5px", paddingBottom: "5px"}}
 				>
-					{work}
+					{description}
 				</div>
 				{currentWork === work && work !== "grass" && <img 
 					src="static/components/landing/extra/redirect_white.svg" 
@@ -38,12 +39,6 @@ export const Card = ({ currentWork, setCurrentWork, path, work, src, description
 				alt={work}
 				style={{opacity: getOpacity()}}
 			/>
-			<div 
-				className="pages-description" 
-				style={{color: "rgba(255, 255, 255, 1)", opacity: getOpacity()}}
-			>
-				{description}
-			</div>
 			{currentWork === work && <div className="card-background"/>}
 		</div>
 	)

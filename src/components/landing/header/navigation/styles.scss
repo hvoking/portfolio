@@ -1,7 +1,7 @@
 .landing-navigation {
   display: flex;
   justify-content: space-between;
-  z-index: 2;  
+  z-index: 3;  
   white-space: nowrap;
 }
 .landing-navigation button {
@@ -28,7 +28,7 @@
   bottom: 0;
   width: 0;
   height: 25px;
-  background-color: rgba(136, 115, 239, 0.4);
+  background-color: rgba(136, 115, 239, 0.8);
   transition: width 0.3s ease, transform 0.3s ease;
 }
 .landing-navigation button.active::after { 

@@ -1,8 +1,9 @@
 export const Description = () => {
 	return (
 		<p className="pages-description">
-			I'm an Architect with a strong foundation <br/>
-			in programming, specializing in the <br/>
+			Innovative solutions for organizations <br/>
+			seeking to leverage technology and design<br/>
+			to transform urban environments through<br/>
 			seamless integration of data and design, <br/>
 			focusing on interactivity and geolocation.
 		</p>

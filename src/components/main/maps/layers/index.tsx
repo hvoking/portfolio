@@ -8,8 +8,8 @@ import { useBuildingLayer } from '../../context/maps/layers/building';
 
 // Third-party imports
 import { useControl } from 'react-map-gl';
-import { MapboxOverlay } from '@deck.gl/mapbox';
-import { DeckProps } from '@deck.gl/core';
+import { MapboxOverlay } from '@deck.gl/mapbox/typed';
+import type { DeckProps } from '@deck.gl/core/typed';
 
 const DeckGLOverlay = (props: DeckProps) => {
   const deck = useControl<any>(() => new MapboxOverlay(props));

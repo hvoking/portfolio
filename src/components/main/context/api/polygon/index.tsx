@@ -2,22 +2,22 @@
 import { useState, useEffect, useContext, createContext } from 'react';
 
 // Context imports
-import { useCircleDimensions } from '../../../filters/dimensions/circle';
-import { useGeo } from '../../../filters/geo';
+import { useCircleDimensions } from '../../filters/dimensions/circle';
+import { useGeo } from '../../filters/geo';
 
-const CircleApiContext: React.Context<any> = createContext(null)
+const PolygonApiContext: React.Context<any> = createContext(null)
 
-export const useCircleApi = () => {
+export const usePolygonApi = () => {
 	return (
-		useContext(CircleApiContext)
+		useContext(PolygonApiContext)
 	)
 }
 
-export const CircleApiProvider = ({children}: any) => {
+export const PolygonApiProvider = ({children}: any) => {
 	const { cityName, placeCoordinates } = useGeo();
 	const { circleGeometry } = useCircleDimensions();
 
-	const [ circleData, setCircleData ] = useState<any>(null);
+	const [ polygonData, setPolygonData ] = useState<any>(null);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -28,19 +28,21 @@ export const CircleApiProvider = ({children}: any) => {
 					"polygon": JSON.stringify(circleGeometry.features[0].geometry),
 			  		"longitude": JSON.stringify(placeCoordinates.longitude),
 					"latitude": JSON.stringify(placeCoordinates.latitude),
+					"schema": "limites",
+					"table": "municipios_br",
 				}),
 			});
 			const receivedData = await res.json();
-			setCircleData(receivedData[0]);
+			setPolygonData(receivedData[0]);
 		}
 		circleGeometry && fetchData();
 	}, [ circleGeometry ]);
 
 	return (
-		<CircleApiContext.Provider value={{ circleData }}>
+		<PolygonApiContext.Provider value={{ polygonData }}>
 			{children}
-		</CircleApiContext.Provider>
+		</PolygonApiContext.Provider>
 	)
 }
 
-CircleApiContext.displayName = "CircleApiContext";
+PolygonApiContext.displayName = "PolygonApiContext";

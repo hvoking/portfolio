@@ -9,8 +9,8 @@ import { useNeighboursLayer } from '../context/maps/layers/neighbours';
 
 // Third-party imports
 import { Map, useControl } from 'react-map-gl';
-import { DeckProps } from '@deck.gl/core';
-import { MapboxOverlay } from '@deck.gl/mapbox';
+import { MapboxOverlay } from '@deck.gl/mapbox/typed';
+import type { DeckProps } from '@deck.gl/core/typed';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const DeckGLOverlay = (props: DeckProps) => {

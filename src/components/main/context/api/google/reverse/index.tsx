@@ -20,8 +20,7 @@ export const GoogleReverseApiProvider = ({children}: any) => {
 	    const tempUrl = `
 	    	${process.env.REACT_APP_API_URL}/
 	    	reverse_api
-	    	?lat=${parcelLatitude}
-	    	&lng=${parcelLongitude}
+	    	?language=pt_BR
 	    `;
 	    const url = tempUrl.replace(/\s/g, '');
 	    const res = await fetch(url);

@@ -7,7 +7,7 @@ import './styles.scss';
 
 // Context imports
 import { useGeo } from '../../context/filters/geo';
-import { useCircleApi } from '../../context/api/geom/circle';
+import { usePolygonApi } from '../../context/api/polygon';
 import { useCircleDimensions } from '../../context/filters/dimensions/circle';
 import { useStyleSheet } from '../../context/filters/stylesheet';
 import { useSVGMapSizes } from '../../context/sizes/maps/svgMap';
@@ -16,15 +16,15 @@ import { useSVGMapSizes } from '../../context/sizes/maps/svgMap';
 import * as d3 from 'd3';
 
 export const SVGMap = () => {
-	const { circleData } = useCircleApi();
+	const { polygonData } = usePolygonApi();
 	const { circleGeometry } = useCircleDimensions();
 	const { innerWidth, innerHeight } = useSVGMapSizes();const { setPlaceCoordinates } = useGeo();
 	const { lineColor, lineWidth, fillColor } = useStyleSheet();
 	const svgContainerRef = useRef<any>(null);
 
-	if (!circleGeometry || !circleData || !circleData[0].city_geom) return (<></>)
+	if (!circleGeometry || !polygonData || !polygonData[0].city_geom) return (<></>)
 
-	const city = circleData[0].city_geom[0];
+	const city = polygonData[0].city_geom[0];
 	const polygon = circleGeometry.features[0].geometry;	
 
 	const projection = d3.geoIdentity()

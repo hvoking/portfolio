@@ -2,7 +2,7 @@
 import { useState, useEffect, useContext, createContext } from 'react';
 
 // Context imports
-import { useCircleApi } from '../../../api/geom/circle';
+import { usePolygonApi } from '../../../api/polygon';
 import { useVisibility } from '../../../filters/visibility/';
 
 const DrainApiContext: React.Context<any> = createContext(null)
@@ -12,7 +12,7 @@ export const useDrainApi = () => {
 }
 
 export const DrainApiProvider = ({children}: any) => {
-	const { circleData } = useCircleApi();
+	const { polygonData } = usePolygonApi();
 	const [ drainData, setDrainData ] = useState<any>(null);
 	const { activeDrain } = useVisibility();
 
@@ -28,7 +28,7 @@ export const DrainApiProvider = ({children}: any) => {
 			setDrainData(receivedData);
 		}
 		activeDrain && fetchData();
-	}, [ circleData, activeDrain ]);
+	}, [ polygonData, activeDrain ]);
 
 	return (
 		<DrainApiContext.Provider value={{ drainData }}>

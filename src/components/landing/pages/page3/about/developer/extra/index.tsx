@@ -60,22 +60,22 @@ export const ExtraTools = ({ setExtraTools }: any) => {
 					<div className="extra-tool-item">
 						<div className="extra-tool-header">
 							<div className="extra-tool-subtitle">
-								ML Price Predictor
+								Airbnb Metrics V2
 							</div>
 							<img 
 								src="static/components/landing/extra/redirect.svg" 
 								width="15px" 
 								alt="redirect"
-								onClick={() => window.open(`${window.location.origin}/#/predictor`)}
+								onClick={() => window.open(`https://generativa.io/#/airbnb_london`)}
 							/>
 						</div>
 						<img 
 							src="static/components/landing/extra/2.jpg" 
-							alt="predictor" 
+							alt="airbnb-metrics" 
 							width="100%"
-							onClick={() => window.open(`${window.location.origin}/#/predictor`)}
+							onClick={() => window.open(`https://generativa.io/#/airbnb_london`)}
 						/>
-						<div>Machine Learning to forecast property values based on neighborhood data.</div>
+						<div>Analytics platform utilizing Airbnb data to understand market trends..</div>
 					</div>
 					<div className="extra-tool-item">
 						<div className="extra-tool-header">

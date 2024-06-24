@@ -4,28 +4,12 @@ import { useCallback } from 'react';
 // Context imports
 import { useGeo } from '../context/filters/geo';
 
-// Layer imports
-import { useNeighboursLayer } from '../context/maps/layers/neighbours';
-
 // Third-party imports
-import { Map, useControl } from 'react-map-gl';
-import { MapboxOverlay } from '@deck.gl/mapbox/typed';
-import type { DeckProps } from '@deck.gl/core/typed';
+import { Map } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-
-const DeckGLOverlay = (props: DeckProps) => {
-  const deck = useControl<any>(() => new MapboxOverlay(props));
-  deck.setProps(props);
-  return null;
-}
 
 export const Maps = () => {
   const { basemap, mapRef, viewport, setPlaceCoordinates } = useGeo();
-
-  // Layers
-  const { neighboursLayer } = useNeighboursLayer();
-
-  const layers = [ neighboursLayer ];
 
   const onDblClick = useCallback((e: any) => {
     const lng = e.lngLat.lng;
@@ -43,7 +27,6 @@ export const Maps = () => {
         doubleClickZoom={false}
         onDblClick={onDblClick}
       >
-        <DeckGLOverlay layers={layers}/>
       </Map>
     </div>
   );

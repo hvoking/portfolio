@@ -75,7 +75,7 @@ export const ExtraTools = ({ setExtraTools }: any) => {
 							width="100%"
 							onClick={() => window.open(`https://generativa.io/#/airbnb_london`)}
 						/>
-						<div>Analytics platform utilizing Airbnb data to understand market trends..</div>
+						<div>Analytics platform utilizing Airbnb data to understand market trends.</div>
 					</div>
 					<div className="extra-tool-item">
 						<div className="extra-tool-header">

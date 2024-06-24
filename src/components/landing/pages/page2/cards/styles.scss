@@ -1,6 +1,6 @@
 .cards-wrapper {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	z-index: 1;
 	gap: 20px;
 	padding: 0px;

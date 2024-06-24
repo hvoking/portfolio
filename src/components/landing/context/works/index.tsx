@@ -17,7 +17,7 @@ export const WorksProvider = ({children}: any) => {
 	const [ description, setDescription ] = useState<any>(descriptions[currentWork]);
 	const [ m2bTheme, setM2bTheme ] = useState("What");
 	const [ jukkaTheme, setJukkaTheme ] = useState("What");
-	const [ grassTheme, setGrassTheme ] = useState("What");
+	const [ airbnbTheme, setAirbnbTheme ] = useState("What");
 	const [ activeIndex, setActiveIndex ] = useState(0);
 
 	useEffect(() => {
@@ -31,7 +31,7 @@ export const WorksProvider = ({children}: any) => {
 				description, setDescription,
 				m2bTheme, setM2bTheme,
 				jukkaTheme, setJukkaTheme,
-				grassTheme, setGrassTheme,
+				airbnbTheme, setAirbnbTheme,
 				activeIndex, setActiveIndex
 			}}
 		>

@@ -26,7 +26,7 @@ export const Card = ({ currentWork, setCurrentWork, path, work, src, description
 					>
 						{description}
 					</div>
-					{currentWork === work && work !== "grass" && <img 
+					{currentWork === work && <img 
 						src="static/components/landing/extra/redirect_white.svg" 
 						width="15px" 
 						alt="redirect"

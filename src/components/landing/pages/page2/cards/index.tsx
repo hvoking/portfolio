@@ -29,10 +29,10 @@ export const Cards = () => {
 			<Card 
 				setCurrentWork={setCurrentWork} 
 				currentWork={currentWork}
-				src="static/components/landing/devices/grass.gif"
-				work="grass"
-				description="Grasshopper for the web"
-				path={`https://github.com/hvoking/grasshopper`}
+				src="static/components/landing/devices/airbnb.png"
+				work="airbnb"
+				description="Airbnb Metrics"
+				path={`https://ugeom.com/`}
 			/>
 		</div>
 	)

@@ -14,20 +14,20 @@ export const Page2 = () => {
 		currentWork, description, 
 		m2bTheme, setM2bTheme,
 		jukkaTheme, setJukkaTheme,
-		grassTheme, setGrassTheme,
+		airbnbTheme, setAirbnbTheme,
 		activeIndex, setActiveIndex
 	} = useWorks();
 	
 	const setCurrentTheme: any = {
 		"m2b": setM2bTheme,
 		"jukka": setJukkaTheme,
-		"grass": setGrassTheme,
+		"airbnb": setAirbnbTheme,
 	}
 
 	const currentTheme: any = {
 		"m2b": m2bTheme,
 		"jukka": jukkaTheme,
-		"grass": grassTheme,
+		"airbnb": airbnbTheme,
 	}
 
 	const works = Object.keys(description);

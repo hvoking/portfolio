@@ -26,10 +26,7 @@ export const Logo = () => {
 			<div className="logo-text">
 				<div>
 					<div className="logo-name">
-						Gustavo Gonzalez
-					</div>
-					<div className="logo-profession">
-						Computational Designer
+						Urban Geometries
 					</div>
 				</div>
 			</div>

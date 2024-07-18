@@ -4,7 +4,7 @@ export const Headline = () => {
 			Transforming <br/>
 			Urban Data into <br/>
 			Engaging Web <br/>
-			Applications
+			Experiences
 		</div>
 	)
 }

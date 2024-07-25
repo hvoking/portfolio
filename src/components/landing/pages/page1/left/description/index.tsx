@@ -1,8 +1,9 @@
 export const Description = () => {
 	return (
 		<p className="pages-description">
-			Empowering organizations with <br/>
-			innovative geospatial technology
+			We empower organizations with advanced geospatial technology to create
+			interactive, real-time maps and rapidly 
+			validate ideas. 
 		</p>
 	)
 }

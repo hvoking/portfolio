@@ -67,8 +67,8 @@ export const ParcelsProvider = ({children}: any) => {
 					d.id in parcelsProperties ? 
 					[172, 208, 56, 50] : 
 					d.constructed_area === 0 ?
-					[255, 255, 0, 155] :
-					[0, 255, 0, 155],
+					[126, 126, 132, 155] :
+					[126, 126, 132, 155],
 				updateTriggers: {
 					"getFillColor": [
 						parcelAreaFrom, parcelAreaTo, 

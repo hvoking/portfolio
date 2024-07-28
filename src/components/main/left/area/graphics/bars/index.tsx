@@ -54,7 +54,7 @@ export const Bars = ({ xScale, minBound, maxBound, innerWidth, innerHeight }: an
                         y={innerHeight - yScale(currentHeight)}
                         width={currentWidth - 2}
                         height={yScale(currentHeight)}
-                        fill={"rgba(255, 255, 0, 0.6)"}
+                        fill={"rgba(126, 126, 132, 0.6)"}
                     />
                 )
             })}
@@ -69,7 +69,7 @@ export const Bars = ({ xScale, minBound, maxBound, innerWidth, innerHeight }: an
                         y={innerHeight - yScale(currentHeight) - yScale(previousHeight)}
                         width={currentWidth - 2}
                         height={yScale(currentHeight)}
-                        fill={"rgba(0, 255, 0, 0.6)"}
+                        fill={"rgba(126, 126, 132, 0.6)"}
                     />
                 )
             })}

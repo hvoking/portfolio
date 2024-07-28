@@ -6,7 +6,7 @@ export const Lot = ({ path, currentLot, ocioso }: any) => {
 
 	return (
 		<path
-			fill={ocioso == 1 ? "rgba(255, 255, 0, 0.2)" : "rgba(0, 255, 0, 0.2)"}
+			fill={ocioso == 1 ? "rgba(126, 126, 132, 0.2)" : "rgba(126, 126, 132, 0.2)"}
 			stroke={linesColor} 
 			strokeWidth={linesWidth}
 			className="feature" 

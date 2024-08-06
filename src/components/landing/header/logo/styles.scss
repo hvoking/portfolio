@@ -8,24 +8,12 @@
 	height: 40px;
 	padding-right: 7px;
 }
-.normal-header {
-	 white-space: nowrap;
-}
-
 .logo-text {
   display: flex;
   align-items: center;
   cursor: pointer;
-}
-
-.logo-name {
-	font-size: 1.4em; 
-	letter-spacing: 1.1px;
-	transform: translateX(-2px);
-}
-.logo-profession {
-	 font-size: 0.7em;
-	 letter-spacing: 3.6px;
+  font-size: 1.4em; 
+	letter-spacing: 2px;
 }
 @media screen and (max-width: 600px) {
   .logo-text {

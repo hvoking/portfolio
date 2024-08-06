@@ -24,11 +24,7 @@ export const Logo = () => {
 				alt="logo"
 			/>
 			<div className="logo-text">
-				<div>
-					<div className="logo-name">
-						Urban Geometries
-					</div>
-				</div>
+				GEOROOTS
 			</div>
 		</div>
 	)

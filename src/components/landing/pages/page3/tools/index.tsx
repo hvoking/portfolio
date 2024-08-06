@@ -16,17 +16,6 @@ export const Tools = () => {
 					<Tool title="aws"/>
 				</div>
 			</div>
-			<div style={{display: "grid", gridGap: "10px"}}>
-				<div className="tools-title">Architecture</div>
-				<div className="tool-list"> 
-					<Tool title="archicad"/>
-					<Tool title="revit"/>
-					<Tool title="grasshopper"/>
-					<Tool title="dynamo"/>
-					<Tool title="autocad"/>
-					<Tool title="photoshop"/>
-				</div>
-			</div>
 		</div>
 	)
 }

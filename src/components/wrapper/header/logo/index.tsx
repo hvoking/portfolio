@@ -12,7 +12,7 @@ export const Logo = () => {
 				src="static/logos/white.svg" 
 				alt="header-logo"
 			/>
-			<div className="logo-name">Mapa Digital</div>
+			<div className="logo-name">MAPA DIGITAL</div>
 		</div>
 	)
 }

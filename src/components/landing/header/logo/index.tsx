@@ -8,7 +8,7 @@ import { useScroll } from '../../context/scroll';
 import { useNavigate } from 'react-router-dom';
 
 export const Logo = () => {
-	const { scrollToSection, currentSection } = useScroll();
+	const { scrollToSection } = useScroll();
 	const navigate = useNavigate();
 
 	const onClick = () => {
@@ -24,7 +24,7 @@ export const Logo = () => {
 				alt="logo"
 			/>
 			<div className="logo-text">
-				GEOROOTS
+				MAPA DIGITAL
 			</div>
 		</div>
 	)

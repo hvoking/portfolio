@@ -20,14 +20,7 @@ export const Logo = () => {
 				style={{paddingLeft: "20px"}}
 			/>
 			<div className="logo-text">
-				<div>
-					<div className="logo-name">
-						Gustavo Gonzalez
-					</div>
-					<div className="logo-profession">
-						Computational Designer
-					</div>
-				</div>
+				MAPA DIGITAL
 			</div>
 		</div>
 	)

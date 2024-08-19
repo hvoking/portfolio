@@ -24,7 +24,7 @@ export const Logo = () => {
 				alt="logo"
 			/>
 			<div className="logo-text">
-				MAPA DIGITAL
+				URBAN GEOMETRIES
 			</div>
 		</div>
 	)

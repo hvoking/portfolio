@@ -3,7 +3,7 @@ import { Left } from './left';
 import { Maps } from './maps';
 import { Right } from './right';
 import { Pdf } from './pdf';
-import { Wrapper } from '../wrapper';
+import { Wrapper } from './wrapper';
 import './styles.scss';
 
 // Context imports

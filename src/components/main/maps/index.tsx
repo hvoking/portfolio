@@ -3,11 +3,8 @@ import { useCallback } from 'react';
 
 // App imports
 import { Pin } from './pin';
-import { MapControllers } from './controllers';
-import { BasemapsSelectors } from './basemaps';
-import { Selectors } from './selectors';
-import { SVGMap } from './svgmap';
-import { Location } from './location';
+import { Controllers } from './controllers';
+import { Wrapper } from './wrapper'
 import './styles.scss';
 
 // Layers imports
@@ -30,8 +27,7 @@ export const Maps = () => {
   }, []); 
 
   return (
-    <div className="map-wrapper">
-      <SVGMap/>
+    <Wrapper>
       <Map
         ref={mapRef}
         mapStyle={basemap}
@@ -41,13 +37,11 @@ export const Maps = () => {
         onDblClick={onDblClick}
       >
         <Layers/>
-        <MapControllers/>
+        <Controllers/>
         <Pin/>
       </Map>
-      <BasemapsSelectors/>
-      <Selectors/>
-      <Location/>
-    </div>
+
+    </Wrapper>
   );
 }
 

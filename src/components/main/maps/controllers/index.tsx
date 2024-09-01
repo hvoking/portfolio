@@ -8,7 +8,7 @@ import { useGeo } from '../../context/filters/geo';
 // Third party imports
 import { NavigationControl } from 'react-map-gl';
 
-export const MapControllers = () => {
+export const Controllers = () => {
 	const { viewport, setViewport, placeCoordinates } = useGeo();
 
 	return (
@@ -23,4 +23,4 @@ export const MapControllers = () => {
 	)
 }
 
-MapControllers.displayName="MapControllers";
+Controllers.displayName="Controllers";

@@ -20,7 +20,7 @@ export const Logo = () => {
 				style={{paddingLeft: "20px"}}
 			/>
 			<div className="logo-text">
-				URBAN GEOMETRIES
+				GEOROOTS
 			</div>
 		</div>
 	)

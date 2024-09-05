@@ -1,18 +1,8 @@
-.logo-wrapper {
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-	color: rgba(255, 255, 255, 1);
-}
-.logo {
-	height: 40px;
-	padding-right: 7px;
-}
 .logo-text {
   display: flex;
   align-items: center;
   cursor: pointer;
-  font-size: 1.4em; 
+  font-size: 1.6em; 
 }
 @media screen and (max-width: 600px) {
   .logo-text {

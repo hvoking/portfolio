@@ -24,7 +24,7 @@ export const Logo = () => {
 				alt="logo"
 			/>
 			<div className="logo-text">
-				GEOROOTS
+				Geomotion Labs
 			</div>
 		</div>
 	)

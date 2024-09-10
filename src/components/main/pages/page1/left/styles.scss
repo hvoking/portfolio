@@ -1,0 +1,14 @@
+.page1-left {
+	display: grid; 
+	z-index: 1;
+	gap: 20px;
+	padding-left: 20px;
+	grid-template-rows: min-content min-content min-content min-content;
+}
+@media (width < 600px) {
+	.page1-left {
+		display: grid; 
+		grid-gap: 10px;
+		z-index: 1;
+	}
+}

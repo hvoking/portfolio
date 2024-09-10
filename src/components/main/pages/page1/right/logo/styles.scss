@@ -1,0 +1,15 @@
+.logo-svg-wrapper {
+	width: calc(100% - 10px);
+	display: grid;
+	align-self: center;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.logo-wrapper {
+	stroke-width: 0.1;
+	transition: all 1s ease-out;
+	cursor: default;
+}
+.logo-wrapper:hover {
+	stroke-width: 0.2;
+}

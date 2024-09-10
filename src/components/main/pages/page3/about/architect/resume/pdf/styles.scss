@@ -1,0 +1,26 @@
+.resume-pdf-wrapper {
+    padding: 40px;
+    padding-top: 10px;
+}
+.resume-small-division {
+    width: 55px;
+    height: 1.6px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 1);
+}
+.resume-long-division {
+    height: 1px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.resume-inner-title {
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+@media screen and (max-width: 600px) {
+    .resume-pdf-wrapper {
+        padding: 10px;
+    }
+}

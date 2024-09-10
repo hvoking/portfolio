@@ -1,21 +1,30 @@
-// Context imports
-import { MapsProvider } from './maps';
-import { FiltersProvider } from './filters';
+// App imports
+import { ScrollProvider } from './scroll';
 import { SizesProvider } from './sizes';
-import { ApiProvider } from './api';
+import { WorksProvider } from './works';
+import { VisibilityProvider } from './visibility';
+import { UsersProvider } from './users';
+import { GridProvider } from './grid';
+import { PdfProvider } from './pdf';
 
-export const MainProvider = ({ children }: any) => {
-	return (
-		<FiltersProvider>
-		<ApiProvider>
-		<SizesProvider>
-		<MapsProvider>
-			{children}
-		</MapsProvider>
-		</SizesProvider>
-		</ApiProvider>
-		</FiltersProvider>
-	)
+export const LandingProvider = ({children}: any) => {
+  return (
+    <UsersProvider>
+    <VisibilityProvider>
+    <SizesProvider>
+    <GridProvider>
+    <ScrollProvider>
+    <WorksProvider>
+    <PdfProvider>
+      {children}
+    </PdfProvider>
+    </WorksProvider>
+    </ScrollProvider>
+    </GridProvider>
+    </SizesProvider>
+    </VisibilityProvider>
+    </UsersProvider>
+  )
 }
 
-MainProvider.displayName="MainProvider";
+LandingProvider.displayName="LandingProvider";

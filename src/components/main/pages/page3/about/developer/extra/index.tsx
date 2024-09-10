@@ -66,14 +66,14 @@ export const ExtraTools = ({ setExtraTools }: any) => {
 								src={process.env.PUBLIC_URL + "/static/extra/redirect.svg"} 
 								width="15px" 
 								alt="redirect"
-								onClick={() => window.open(`https://generativa.io/#/airbnb_london`)}
+								onClick={() => window.open(`https://hvoking.github.io/airbnb/`)}
 							/>
 						</div>
 						<img 
 							src={process.env.PUBLIC_URL + "/static/extra/2.jpg"} 
 							alt="airbnb-metrics" 
 							width="100%"
-							onClick={() => window.open(`https://generativa.io/#/airbnb_london`)}
+							onClick={() => window.open(`https://hvoking.github.io/airbnb/`)}
 						/>
 						<div>Analytics platform utilizing Airbnb data to understand market trends.</div>
 					</div>

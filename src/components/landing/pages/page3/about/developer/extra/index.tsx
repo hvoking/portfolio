@@ -23,14 +23,14 @@ export const ExtraTools = ({ setExtraTools }: any) => {
 								src="static/components/landing/extra/redirect.svg" 
 								width="15px" 
 								alt="redirect"
-								onClick={() => window.open(`https://ugeom.com/#/cnpj`)}
+								onClick={() => window.open(`https://hvoking.github.io/cnpj/`)}
 							/>
 						</div>
 						<img 
 							src="static/components/landing/extra/0.jpg" 
 							alt="business" 
 							width="100%"
-							onClick={() => window.open(`https://ugeom.com/#/cnpj`)}
+							onClick={() => window.open(`https://hvoking.github.io/cnpj/`)}
 						/>
 						<div>
 							Clusters of Santa Catarina's business landscape,

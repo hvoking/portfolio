@@ -20,14 +20,14 @@ export const ExtraTools = ({ setExtraTools }: any) => {
 								Business Cluster
 							</div>
 							<img 
-								src="static/components/landing/extra/redirect.svg" 
+								src={process.env.PUBLIC_URL + "/static/extra/redirect.svg"} 
 								width="15px" 
 								alt="redirect"
 								onClick={() => window.open(`https://hvoking.github.io/cnpj/`)}
 							/>
 						</div>
 						<img 
-							src="static/components/landing/extra/0.jpg" 
+							src={process.env.PUBLIC_URL + "/static/extra/0.jpg"} 
 							alt="business" 
 							width="100%"
 							onClick={() => window.open(`https://hvoking.github.io/cnpj/`)}
@@ -43,14 +43,14 @@ export const ExtraTools = ({ setExtraTools }: any) => {
 								Serverless Geometry
 							</div>
 							<img 
-								src="static/components/landing/extra/redirect.svg" 
+								src={process.env.PUBLIC_URL + "/static/extra/redirect.svg"} 
 								width="15px" 
 								alt="redirect"
 								onClick={() => window.open(`https://hvoking.github.io/geometry/`)}
 							/>
 						</div>
 						<img 
-							src="static/components/landing/extra/1.jpg" 
+							src={process.env.PUBLIC_URL + "/static/extra/1.jpg"} 
 							alt="geometry-app" 
 							width="100%"
 							onClick={() => window.open(`https://hvoking.github.io/geometry/`)}
@@ -63,14 +63,14 @@ export const ExtraTools = ({ setExtraTools }: any) => {
 								Airbnb Metrics V2
 							</div>
 							<img 
-								src="static/components/landing/extra/redirect.svg" 
+								src={process.env.PUBLIC_URL + "/static/extra/redirect.svg"} 
 								width="15px" 
 								alt="redirect"
 								onClick={() => window.open(`https://generativa.io/#/airbnb_london`)}
 							/>
 						</div>
 						<img 
-							src="static/components/landing/extra/2.jpg" 
+							src={process.env.PUBLIC_URL + "/static/extra/2.jpg"} 
 							alt="airbnb-metrics" 
 							width="100%"
 							onClick={() => window.open(`https://generativa.io/#/airbnb_london`)}
@@ -83,14 +83,14 @@ export const ExtraTools = ({ setExtraTools }: any) => {
 								Real Estate Demo
 							</div>
 							<img 
-								src="static/components/landing/extra/redirect.svg" 
+								src={process.env.PUBLIC_URL + "/static/extra/redirect.svg"} 
 								width="15px" 
 								alt="redirect"
 								onClick={() => window.open(`https://hvoking.github.io/demo/`)}	
 							/>
 						</div>
 						<img 
-							src="static/components/landing/extra/3.jpg" 
+							src={process.env.PUBLIC_URL + "/static/extra/3.jpg"} 
 							alt="real-estate-x" 
 							width="100%"
 							onClick={() => window.open(`https://hvoking.github.io/demo/`)}

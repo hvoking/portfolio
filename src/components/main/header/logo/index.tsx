@@ -12,15 +12,8 @@ export const Logo = () => {
 	}
 	
 	return (
-		<div className="logo-wrapper" onClick={onClick}>
-			<img 
-				className="logo" 
-				src="static/logos/white.svg" 
-				alt="logo"
-			/>
-			<div className="logo-text">
-				Ugeom
-			</div>
+		<div className="logo-text" onClick={onClick}>
+			ugeom
 		</div>
 	)
 }

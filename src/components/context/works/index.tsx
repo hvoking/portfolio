@@ -15,10 +15,10 @@ export const useWorks = () => {
 export const WorksProvider = ({children}: any) => {
 	const [ currentWork, setCurrentWork ] = useState<any>("m2b");
 	const [ description, setDescription ] = useState<any>(descriptions[currentWork]);
+	const [ activeIndex, setActiveIndex ] = useState(0);
 	const [ m2bTheme, setM2bTheme ] = useState("What");
 	const [ jukkaTheme, setJukkaTheme ] = useState("What");
 	const [ airbnbTheme, setAirbnbTheme ] = useState("What");
-	const [ activeIndex, setActiveIndex ] = useState(0);
 
 	useEffect(() => {
 		setDescription(descriptions[currentWork])

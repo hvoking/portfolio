@@ -7,8 +7,8 @@ import { Grid } from './grid';
 import './styles.scss';
 
 // Context imports
-import { useScroll } from '../context/scroll';
-import { useGrid } from '../context/grid';
+import { useScroll } from '../../context/scroll';
+import { useGrid } from '../../context/grid';
 
 export const Pages = () => {
 	const { debouncedScroll } = useScroll();

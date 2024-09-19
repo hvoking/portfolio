@@ -4,7 +4,7 @@ import { Pages } from './pages';
 import './styles.scss';
 
 // Context imports
-import { LandingProvider } from './context';
+import { LandingProvider } from '../context';
 
 export const Main = () => {
 	let vh = window.innerHeight * 0.01;

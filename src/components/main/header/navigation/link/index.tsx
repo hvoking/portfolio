@@ -1,5 +1,5 @@
 // Context imports
-import { useScroll } from '../../../context/scroll';
+import { useScroll } from '../../../../context/scroll';
 
 export const NavLink = ({ page, title }: any) => {
 	const { scrollToSection, currentSection } = useScroll();

@@ -2,7 +2,7 @@
 import './styles.scss';
 
 // Context imports
-import { useScroll } from '../../../../context/scroll';
+import { useScroll } from '../../../../../context/scroll';
 
 export const Card = ({ currentWork, setCurrentWork, path, work, src, description }: any) => {
 	const { scrollToSection, currentSection } = useScroll();

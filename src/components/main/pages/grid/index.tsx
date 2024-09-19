@@ -3,8 +3,8 @@ import { SVGWrapper } from './svg';
 import './styles.scss';
 
 // Context imports
-import { useBackgroundSizes } from '../../context/sizes/background';
-import { useScroll } from '../../context/scroll';
+import { useBackgroundSizes } from '../../../context/sizes/background';
+import { useScroll } from '../../../context/scroll';
 
 import * as d3 from 'd3';
 

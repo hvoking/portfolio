@@ -5,7 +5,7 @@ import { CancelCross } from '../../../../utils/cross';
 import './styles.scss';
 
 // Context imports
-import { usePdf } from '../../../../../context/pdf'
+import { usePdf } from '../../../../../../context/pdf'
 
 export const Resume = ({ setActiveResume }: any) => {
 	const onClick = () => setActiveResume(false);

@@ -8,7 +8,7 @@ import { CTA } from './cta';
 import './styles.scss';
 
 // Context imports
-import { useUserMessage } from '../../../../context/users/message';
+import { useUserMessage } from '../../../../../context/users/message';
 
 export const Form = () => {
 	const { name, email, message, error, dispatch } = useUserMessage();

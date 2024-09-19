@@ -2,7 +2,7 @@
 import { SVGArrow } from '../../../../utils/arrow';
 
 // Context imports
-import { useUserMessage } from '../../../../../context/users/message';
+import { useUserMessage } from '../../../../../../context/users/message';
 
 export const CTA = () => {
   const { isLoading } = useUserMessage();

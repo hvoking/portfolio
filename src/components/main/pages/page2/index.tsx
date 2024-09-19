@@ -7,7 +7,7 @@ import { Arrows } from './slider/carousel/arrows'
 import './styles.scss';
 
 // Context imports
-import { useWorks } from '../../context/works';
+import { useWorks } from '../../../context/works';
 
 export const Page2 = () => {
 	const { 

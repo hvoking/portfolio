@@ -4,7 +4,7 @@ import { NewMessage } from './new';
 import './styles.scss';
 
 // Context imports
-import { useUserMessage } from '../../../context/users/message';
+import { useUserMessage } from '../../../../context/users/message';
 
 export const Right = () => {
 	const { isMessageSend, dispatch } = useUserMessage();

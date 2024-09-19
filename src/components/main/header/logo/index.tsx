@@ -2,7 +2,7 @@
 import './styles.scss';
 
 // Context imports
-import { useScroll } from '../../context/scroll';
+import { useScroll } from '../../../context/scroll';
 
 export const Logo = () => {
 	const { scrollToSection } = useScroll();
@@ -19,7 +19,7 @@ export const Logo = () => {
 				alt="logo"
 			/>
 			<div className="logo-text">
-				Spatial Fingers
+				Ugeom
 			</div>
 		</div>
 	)

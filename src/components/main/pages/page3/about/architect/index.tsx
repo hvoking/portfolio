@@ -3,7 +3,7 @@ import { SVGArrow } from '../../../utils/arrow';
 import { Resume } from './resume';
 
 // Context imports
-import { useVisibility } from '../../../../context/visibility'
+import { useVisibility } from '../../../../../context/visibility'
 
 export const Architect = () => {
 	const { activeResume, setActiveResume } = useVisibility();

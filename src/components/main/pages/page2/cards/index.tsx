@@ -3,7 +3,7 @@ import { Card } from './card';
 import './styles.scss';
 
 // Context imports
-import { useWorks } from '../../../context/works'
+import { useWorks } from '../../../../context/works'
 
 export const Cards = () => {
 	const { currentWork, setCurrentWork } = useWorks();

@@ -2,7 +2,7 @@
 import { useCallback, Children, cloneElement } from 'react';
 
 // Context imports
-import { useBackgroundSizes } from '../../../context/sizes/background';
+import { useBackgroundSizes } from '../../../../context/sizes/background';
 
 export const SVGWrapper = ({ children }: any) => {
 	const { width, height, setWidth, setHeight, margin } = useBackgroundSizes();

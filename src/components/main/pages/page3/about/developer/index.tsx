@@ -3,7 +3,7 @@ import { ExtraTools } from './extra';
 import { SVGArrow } from '../../../utils/arrow';
 
 // Context imports
-import { useVisibility } from '../../../../context/visibility'
+import { useVisibility } from '../../../../../context/visibility'
 
 export const Developer = () => {
 	const { extraTools, setExtraTools } = useVisibility();

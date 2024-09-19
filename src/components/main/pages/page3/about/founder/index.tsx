@@ -4,7 +4,7 @@ import { SVGArrow } from '../../../utils/arrow'
 import { Gnrt } from './gnrt';
 
 // Context imports
-import { useVisibility } from '../../../../context/visibility'
+import { useVisibility } from '../../../../../context/visibility'
 
 export const Founder = () => {
 	const { activeGnrt, setActiveGnrt } = useVisibility();

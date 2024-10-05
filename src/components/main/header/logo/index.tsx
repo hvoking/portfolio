@@ -13,7 +13,11 @@ export const Logo = () => {
 	
 	return (
 		<div className="logo-text" onClick={onClick}>
-			ugeom
+			<img 
+				src={process.env.PUBLIC_URL + "/static/logos/logo.svg"} 
+				alt="logo" 
+				height="50px"
+			/>
 		</div>
 	)
 }

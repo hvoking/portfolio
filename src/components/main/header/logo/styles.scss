@@ -1,15 +1,9 @@
-.logo-wrapper {
-  display: flex;
-  align-items: center;
+.logo-image {
+  height: 50px;
   cursor: pointer;
-  color: rgba(255, 255, 255, 1);
-  gap: 7px;
 }
-.logo {
-  height: 40px;
-}
-@media screen and (max-width: 600px) {
-  .logo-text {
-    display: none;
+@media screen and (max-width: 768px) {
+  .logo-image {
+    height: 35px;
   }
 }

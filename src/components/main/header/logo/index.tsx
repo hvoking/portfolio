@@ -12,13 +12,12 @@ export const Logo = () => {
 	}
 	
 	return (
-		<div className="logo-text" onClick={onClick}>
-			<img 
-				src={process.env.PUBLIC_URL + "/static/logos/logo.svg"} 
-				alt="logo" 
-				height="50px"
-			/>
-		</div>
+		<img 
+			src={process.env.PUBLIC_URL + "/static/logos/logo.svg"} 
+			alt="logo" 
+			onClick={onClick}
+			className="logo-image"
+		/>
 	)
 }
 

@@ -1,6 +1,6 @@
 // App imports
-import { About } from './about';
-import { Tools } from './tools';
+import { Left } from './left';
+import { Right } from './right';
 import './styles.scss';
 
 export const Page3 = () => {
@@ -8,8 +8,8 @@ export const Page3 = () => {
 		<section id="page3" className="page3-wrapper">
 			<div></div>
 			<div className="page3">
-				<About/>
-				<Tools/>
+				<Left/>
+				<Right/>
 			</div>
 			<div></div>
 		</section>

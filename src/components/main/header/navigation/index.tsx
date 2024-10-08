@@ -7,8 +7,7 @@ export const Navigation = () => {
 		<nav className="landing-navigation">
 			<NavLink page="page1" title="Home"/>
 			<NavLink page="page2" title="Works"/>
-			<NavLink page="page3" title="About"/>
-			<NavLink page="page4" title="Contact"/>
+			<NavLink page="page3" title="Contact"/>
 		</nav>
 	)
 }

@@ -6,8 +6,14 @@
 }
 .page3 {
 	display: grid;
+	grid-template-columns: 1fr 2fr;
 	grid-gap: 20px;
-	overflow: hidden;
+	padding-top: 20px;
+}
+.page3-title {
+	font-size: 1.2em;
+	color: rgba(255, 255, 255, 1);
+	padding-bottom: 5px;
 }
 @media screen and (max-width: 1280px) {
 	.page3-wrapper {
@@ -21,7 +27,10 @@
 }
 @media screen and (max-width: 600px) {
 	.page3 {
-		grid-gap: 10px;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto min-content;
+		grid-column-gap: 0px;
+		grid-row-gap: 10px;
 		padding-top: 10px;
 	}
 }

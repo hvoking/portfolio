@@ -1,6 +1,7 @@
 .landing-navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
+  gap: 40px;
   z-index: 3;  
   white-space: nowrap;
 }
@@ -34,4 +35,9 @@
 .landing-navigation button.active::after { 
   width: 100%;
   transform: scaleX(1);
+}
+@media screen and (max-width: 768px) {
+   .landing-navigation {
+      gap: 5px;
+   }
 }

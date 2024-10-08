@@ -11,7 +11,7 @@ export const Right = () => {
 
 	return (
 		<div className="contact-form-wrapper">
-			<div className="tools-title">
+			<div className="page3-title">
 				Let's bring Urban Data to Life!
 			</div>
 			{isMessageSend ? <NewMessage dispatch={dispatch}/> : <Form/>}

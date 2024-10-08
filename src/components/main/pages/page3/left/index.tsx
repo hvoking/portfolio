@@ -7,7 +7,7 @@ import './styles.scss';
 export const Left = () => {
 	return (
 		<div className="contact-info-wrapper">
-			<div className="tools-title">Contacts</div>
+			<div className="page3-title">Contacts</div>
 			<div className="social-info">
 				<img 
 					src={process.env.PUBLIC_URL + "/static/profile/dog.png"} 

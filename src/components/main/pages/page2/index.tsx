@@ -49,7 +49,7 @@ export const Page2 = () => {
 		<section id="page2" className="page2-wrapper">
 			<div></div>
 				<Cards/>
-				{/*<div className="slider-item-wrapper">
+				<div className="slider-item-wrapper">
 					<div className="slider-tabs-wrapper">
 						<Arrows activeIndex={activeIndex} updateIndex={updateIndex} />
 						<Tabs
@@ -70,7 +70,7 @@ export const Page2 = () => {
 						description={description} 
 						theme={currentTheme[currentWork]}
 					/>
-				</div>*/}
+				</div>
 			<div></div>
 		</section>
 	)

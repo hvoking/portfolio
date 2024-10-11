@@ -1,7 +1,6 @@
 // App imports
 import { Page1 } from './page1'; 
 import { Page2 } from './page2'; 
-import { Page3 } from './page3'; 
 import { Grid } from './grid';
 import './styles.scss';
 
@@ -22,7 +21,6 @@ export const Pages = () => {
 			<Grid currentMousePosition={currentMousePosition}/>
 			<Page1/>
 			<Page2/>
-			<Page3/>
 		</div>
 	)
 }

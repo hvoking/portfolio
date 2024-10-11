@@ -1,6 +1,7 @@
 // App imports
 import { Header } from './header';
 import { Pages } from './pages';
+import { Contacts } from './contacts'; 
 import './styles.scss';
 
 // Context imports
@@ -20,6 +21,7 @@ export const Main = () => {
 			<div className="landing">
 				<Header/>
 				<Pages/>
+				<Contacts/>
 			</div>
 		</LandingProvider>
 	)

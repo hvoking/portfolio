@@ -1,14 +1,12 @@
 .page1-left {
-	display: grid; 
-	z-index: 1;
-	gap: 20px;
-	padding-left: 20px;
-	grid-template-rows: min-content min-content min-content min-content;
+	display: grid;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.2);
+	align-content: center;
+	grid-gap: 40px;
+	padding-left: 40px;
 }
-@media (width < 600px) {
+@media (width < 768px) {
 	.page1-left {
-		display: grid; 
-		grid-gap: 10px;
-		z-index: 1;
 	}
 }

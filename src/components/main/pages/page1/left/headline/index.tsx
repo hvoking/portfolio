@@ -2,8 +2,7 @@ export const Headline = () => {
 	return (
 		<div className="pages-title">
 			Customized <br/>
-			Web Mapping <br/>
-			Applications
+			Web Mapping
 		</div>
 	)
 }

@@ -1,8 +1,8 @@
 // App imports
-import { SVGArrow } from '../../../utils/arrow';
+import { SVGArrow } from '../../../../utils/arrow';
 
 // Context imports
-import { useWorks } from '../../../../../context/works'
+import { useWorks } from '../../../../../../context/works'
 
 export const CTA = () => {
 	const { currentWork } = useWorks();

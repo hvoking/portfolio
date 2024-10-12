@@ -1,25 +1,30 @@
 // App imports
-import { Left } from './left';
-import { Maps } from './maps';
-import { Right } from './right';
-import { Pdf } from './pdf';
-import { Wrapper } from '../wrapper';
+import { Header } from './header';
+import { Pages } from './pages';
+import { Contacts } from './contacts'; 
 import './styles.scss';
 
 // Context imports
-import { MainProvider } from './context';
+import { LandingProvider } from '../context';
 
-export const Main = () => (
-  <MainProvider>
-    <Wrapper>
-      <div className="main">
-        <Left/>
-        <Maps/>
-        <Right/>
-      </div>
-      <Pdf/>
-    </Wrapper>
-  </MainProvider>
-)
+export const Main = () => {
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+	window.addEventListener('resize', () => {
+	  let vh = window.innerHeight * 0.01;
+	  document.documentElement.style.setProperty('--vh', `${vh}px`);
+	});
+	
+	return (
+		<LandingProvider>
+			<div className="landing">
+				<Header/>
+				<Pages/>
+				<Contacts/>
+			</div>
+		</LandingProvider>
+	)
+}
 
 Main.displayName="Main";

@@ -1,0 +1,14 @@
+ .landing-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+.landing-navigation-wrapper {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+}
+@media screen and (max-width: 768px) {
+   .landing-header {
+      grid-template-columns: 20px auto 20px;
+   }
+}

@@ -1,0 +1,12 @@
+.cards-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	z-index: 1;
+	gap: 20px;
+	padding: 0px;
+}
+@media screen and (width < 600px) {
+	.cards-wrapper {
+		gap: 5px;
+	}
+}

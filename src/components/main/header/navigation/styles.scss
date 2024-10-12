@@ -1,0 +1,43 @@
+.landing-navigation {
+  display: flex;
+  justify-content: end;
+  gap: 40px;
+  z-index: 3;  
+  white-space: nowrap;
+}
+.landing-navigation button {
+  height: 25px;
+  line-height: 25px;
+  position: relative;
+  cursor: pointer; 
+  color: rgba(255, 255, 255, 1);
+  padding-right: 10px;
+  padding-left: 10px;
+  user-select: none;
+  background-color: transparent;
+  border: none;
+}
+.landing-navigation .active {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+.landing-navigation button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 25px;
+  background-color: rgba(136, 115, 239, 0.8);
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+.landing-navigation button.active::after { 
+  width: 100%;
+  transform: scaleX(1);
+}
+@media screen and (max-width: 768px) {
+   .landing-navigation {
+      gap: 5px;
+   }
+}
